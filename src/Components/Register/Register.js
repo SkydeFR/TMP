@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Register.css';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
 
 class Register extends Component {
   render() {
@@ -39,6 +41,40 @@ class Register extends Component {
         
     );
   }
+}
+
+class GenderDropdown extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            dropdownOpen: false
+        }
+    }
+
+    toggle() {
+        this.setState({
+            dropdownOpen: !this.state.dropdownOpen
+        })
+    }
+
+    render() {
+        return(
+            <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                <DropdownToggle caret>
+                Button
+                </DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem>Masculin</DropdownItem>
+                    <DropdownItem>Féminin</DropdownItem>
+                    <DropdownItem>Autre</DropdownItem>
+                </DropdownMenu>
+            </ButtonDropdown>
+        )
+    }
+
 }
 
 export default Register;
