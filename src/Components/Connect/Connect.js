@@ -1,31 +1,40 @@
 import React, { Component } from 'react';
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import './Connect.css';
 
 class Connect extends Component {
   render() {
     return (
-
         <div>
+          <h1>Connexion</h1>
+          <h2 class="sous-titre">Accédez à votre espace personnel</h2>
 
-        <h1>Se connecter</h1>
-        <h2 class="sous-titre">Sous-titre</h2>
 
-        <div class="card">
-            Adresse e-mail
-            <br/>
-            <input type="text" />
-            <br/>
+          <section id="connexion">
+            <Container>
+              <Row>
+                <Col>
 
-            Mot de passe
-            <br/>
-            <input type="text" />
+                </Col>
+                <Col>
+                  <Form>
+                    <FormGroup>
+                      <Label for="identifiant"><i class="material-icons">person</i> Identifiant</Label>
+                      <Input type="text" name="identifiant" id="connexion-identifiant"></Input>
+                    </FormGroup>
 
-            <br/>
-            <button>Valider</button>
-            <br/>
-            
-        </div>
+                    <FormGroup>
+                      <Label for="mot-de-passe"><i class="material-icons">security</i> Mot de passe</Label>
+                      <Input type="password" name="mot-de-passe" id="connexion-mot-de-passe"></Input>
+                    </FormGroup>
 
+                    <Button>Connexion</Button>
+                  </Form>
+                  <p>Vous n'avez pas de compte ? <a href="#">Créez-en un !</a></p>
+                </Col>
+              </Row>
+            </Container>
+          </section>
         </div>
     );
   }

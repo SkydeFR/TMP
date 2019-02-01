@@ -119,6 +119,27 @@ nav.navbar {
   color: $twinkle-blue !important;
 }
 
+#connexion {
+  background: $prestige-blue;
+  background: linear-gradient(140deg, $prestige-blue 0%, $black 100%);
+  color: $white;
+}
+
 .material-icons {
   vertical-align: bottom;
+}
+
+.btn-secondary {
+  background: $bright-greek;
+  background: linear-gradient(140deg, $saturated-sky 0%, $bright-greek 100%);
+  color: $white;
+  border: none !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s !important;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 0 11px $saturated-sky;
+  transition: 0.5s !important;
 }
