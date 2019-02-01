@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './Components/Home/Home.js';
 import Book from './Components/Book/Book.js';
