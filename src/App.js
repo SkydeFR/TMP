@@ -24,6 +24,7 @@ class App extends Component {
           <Route path="/destinations" component={Trips} />
           <Route path="/connexion" component={Connect} />
           <Route path="/inscription" component={Register} />
+          <DefaultRoute handler={NotFound} />
 
           <Footer />
         </div>
