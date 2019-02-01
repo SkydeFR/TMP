@@ -12,7 +12,7 @@ import Navigation from './Components/StructurePage/Navigation.js';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/~temoins">
         <div>
           <Navigation />
 
