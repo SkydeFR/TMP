@@ -40,6 +40,8 @@ class Footer extends Component {
                                 <li><ReactLink tag={BootstrapLink} to="/">Accueil</ReactLink></li>
                                 <li><ReactLink tag={BootstrapLink} to="/reserver">Réserver</ReactLink></li>
                                 <li><ReactLink tag={BootstrapLink} to="/destinations">Nos destinations</ReactLink></li>
+                                <li><ReactLink tag={BootstrapLink} to="/connexion">Connexion</ReactLink></li>
+                                <li><ReactLink tag={BootstrapLink} to="/inscription">Inscription</ReactLink></li>
                             </ul>
                         </div>
 

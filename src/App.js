@@ -20,13 +20,12 @@ class App extends Component {
           <Navigation />
 
           <Route exact path="/" component={Home} />
-          <Route path="/inscription" component={Register} />
-          <Route path="/connexion" component={Connect} />
           <Route path="/reserver" component={Book} />
           <Route path="/destinations" component={Trips} />
+          <Route path="/connexion" component={Connect} />
+          <Route path="/inscription" component={Register} />
 
           <Footer />
-
         </div>
       </Router>
     );
