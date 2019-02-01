@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Home from './Components/Home/Home.js';
 import Book from './Components/Book/Book.js';
@@ -10,7 +10,7 @@ import LegalNotice from './Components/LegalNotice/LegalNotice.js';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div>
           <ul>
             <li>
@@ -34,7 +34,7 @@ class App extends Component {
           <Route path="/destinations" component={Trips} />
           <Route path="/mentions-legales" component={LegalNotice} />
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
