@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link as BootstrapLink} from 'reactstrap' ;
+//import {Link as BootstrapLink} from 'reactstrap' ;
 import {Link as ReactLink} from 'react-router-dom';
 
 class Footer extends Component {
@@ -24,10 +24,12 @@ class Footer extends Component {
                     <div class="col-md-3 mx-auto">
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">WSC'Event</h5>
                     <ul class="list-unstyled">
+                        {/*
                         <li><ReactLink tag={BootstrapLink} to="/">Accueil</ReactLink></li>
                         <li><ReactLink tag={BootstrapLink} to="/reserver">Réserver</ReactLink></li>
                         <li><ReactLink tag={BootstrapLink} to="/destinations">Nos destinations</ReactLink></li>
                         <li><ReactLink tag={BootstrapLink} to="/mentions-legales">Mentions légales</ReactLink></li>
+                        */}
                     </ul>
                     </div>
 
