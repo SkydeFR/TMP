@@ -20,7 +20,7 @@ class Navigation extends Component {
         this.toggle = this.toggle.bind(this);
         this.state = {
             isOpen: false,
-            currentPage: 0
+            title: "Barre de navigation"
         }
     }
 
@@ -34,22 +34,14 @@ class Navigation extends Component {
         return (
             <div>
             <Navbar color='light' light expand="md">
-            <NavbarBrand href="/">Barre de navigation</NavbarBrand>
+            <NavbarBrand href="/">{this.state.title}</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
-                    <NavItem>
-                        <NavLink href="/">Accueil</NavLink> {/* Présentation de la machine + témoignages d'anciens clients + l'équipe + entreprise ? */}
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/reserver">Réserver</NavLink> {/* Réservation avec formulaire */}
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/destinations">Nos destinations</NavLink> {/* Voyages et prestations possibles */}
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/mentions-legales">Mentions légales</NavLink> {/* Mentions légales */}
-                    </NavItem>
+                    <NavbarElem link='/' title='Accueil'  />
+                    <NavbarElem link='/reserver' title='Réserver' />
+                    <NavbarElem link='/destinations' title='Nos destinations' />
+                    <NavbarElem link='/mentions-legales' title='Mentions légales' />
                 </Nav>
             </Collapse>
             </Navbar>
@@ -71,14 +63,12 @@ class NavbarElem extends Component {
 
     render() {
         return (
-            <li>
-                <Link to='{this.state.link}'>{this.state.title}</Link>
-            </li>
+            <NavItem>
+                <NavLink href={this.state.link}>{this.state.title}</NavLink>
+            </NavItem>
         )
     }
 
 }
-
-//<NavbarElem title='Accueil' link='/' />
 
 export default Navigation;
