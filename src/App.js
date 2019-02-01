@@ -6,26 +6,14 @@ import Home from './Components/Home/Home.js';
 import Book from './Components/Book/Book.js';
 import Trips from './Components/Trips/Trips.js';
 import LegalNotice from './Components/LegalNotice/LegalNotice.js';
+import Navigation from './Components/StructurePage/Navigation.js';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <ul>
-            <li>
-              <Link to="/">Accueil</Link> {/* Présentation de la machine + témoignages d'anciens clients + l'équipe + entreprise ? */}
-            </li>
-            <li>
-              <Link to="/reserver">Réserver</Link> {/* Réservation avec formulaire */}
-            </li>
-            <li>
-              <Link to="/destinations">Nos destinations</Link> {/* Voyages et prestations possibles */}
-            </li>
-            <li>
-              <Link to="/mentions-legales">Mentions légales</Link> {/* Mentions légales */}
-            </li>
-          </ul>
+          <Navigation />
 
           <hr />
 
