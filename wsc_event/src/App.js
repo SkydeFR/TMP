@@ -1,26 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
+
+import Home from './Components/Home/Home.js';
+import Book from './Components/Book/Book.js';
+import Trips from './Components/Trips/Trips.js';
+import LegalNotice from './Components/LegalNotice/LegalNotice.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div>
+          <ul>
+            <li>
+              <Link to="/">Accueil</Link> {/* Présentation de la machine + témoignages d'anciens clients + l'équipe + entreprise ? */}
+            </li>
+            <li>
+              <Link to="/reserver">Réserver</Link> {/* Réservation avec formulaire */}
+            </li>
+            <li>
+              <Link to="/destinations">Nos destinations</Link> {/* Voyages et prestations possibles */}
+            </li>
+            <li>
+              <Link to="/mentions-legales">Mentions légales</Link> {/* Mentions légales */}
+            </li>
+          </ul>
+
+          <hr />
+
+          <Route exact path="/" component={Home} />
+          <Route path="/reserver" component={Book} />
+          <Route path="/destinations" component={Trips} />
+          <Route path="/mentions-legales" component={LegalNotice} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
