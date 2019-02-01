@@ -13,7 +13,7 @@ import Footer from './Components/StructurePage/Footer.js';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/~temoins">
         <div>
           <Navigation />
 
