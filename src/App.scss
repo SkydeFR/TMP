@@ -35,3 +35,67 @@ $anti-flash-white: #f1f2f6;
 
 $city-lights: #dfe4ea;
 $twinkle-blue: #ced6e0;
+
+$black: #000000;
+
+
+body {
+  background-image: radial-gradient(circle, $city-lights, $city-lights 1px, $white 1px, $white);
+  background-size: 20px 20px;
+  color: $prestige-blue;
+  font-family: 'Open Sans';
+
+}
+
+p {
+  text-align: justify;
+}
+
+section {
+  padding-top : 42px;
+  padding-bottom: 42px;
+}
+
+h1, h2 {
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+h1 {
+  font-size: 8em !important;
+  text-align: center;
+  padding-top: 60px !important;
+  padding-bottom: 80px !important;
+}
+
+h2 {
+  font-size: 3.3em !important;
+  margin-bottom: 0 !important;
+}
+
+h3 {
+  font-size: 1.7em !important;
+  font-variant: small-caps;
+  color: $grisaille !important;
+  margin-bottom: 42px !important;
+}
+
+#faucon-imperial {
+  background: $prestige-blue;
+  background: linear-gradient(140deg, $prestige-blue 0%, $black 100%);
+  color: $white;
+}
+
+#temoignages {
+  color: $prestige-blue;
+}
+
+#equipe {
+  background: $bright-greek;
+  background: linear-gradient(140deg, $saturated-sky 0%, $bright-greek 100%);
+  color: $white;
+}
+
+#faucon-imperial h3, #equipe h3 {
+  color: $twinkle-blue !important;
+}
