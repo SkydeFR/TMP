@@ -18,7 +18,7 @@ class Navigation extends Component {
         this.toggle = this.toggle.bind(this);
         this.state = {
             isOpen: false,
-            title: "Barre de navigation"
+            title: "WSC Event"
         }
     }
 
@@ -43,6 +43,7 @@ class Navigation extends Component {
                         </Nav>
                     </Collapse>
                 </Navbar>
+                <div class="nav-underline"></div>
             </div>
         )
     }
