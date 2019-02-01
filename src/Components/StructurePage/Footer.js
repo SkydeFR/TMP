@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link as BootstrapLink} from 'bootstrap' ;
+import {Link as BootstrapLink} from 'reactstrap' ;
 import {Link as ReactLink} from 'react-router-dom';
 
 class Footer extends Component {
