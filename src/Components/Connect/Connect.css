@@ -1,0 +1,15 @@
+.card {
+    text-align: center;
+    width: 18rem;
+    margin: auto;
+}
+
+input {
+    width: 80%;
+    margin: auto;
+}
+
+button {
+    width: 50%;
+    margin: auto;
+}
