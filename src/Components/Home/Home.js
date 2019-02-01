@@ -6,7 +6,8 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Accueil</h1>
+        <h1>WSC Event</h1>
+        <h2 class="sous-titre">Revivez l'Histoire. Vivez la vôtre.</h2>
         <section id="faucon-imperial">
           <Container>
             <Row>

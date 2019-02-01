@@ -65,12 +65,19 @@ h1 {
   font-size: 8em !important;
   text-align: center;
   padding-top: 60px !important;
-  padding-bottom: 80px !important;
+  
 }
 
 h2 {
   font-size: 3.3em !important;
   margin-bottom: 0 !important;
+}
+
+h2.sous-titre {
+  font-size: 2em !important;
+  text-align: center;
+  color: $grisaille;
+  padding-bottom: 100px !important;
 }
 
 h3 {
