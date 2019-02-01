@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { BrowserRouter as Router, Route, DefaultRoute } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './Components/Home/Home.js';
@@ -25,7 +25,7 @@ class App extends Component {
           <Route path="/destinations" component={Trips} />
           <Route path="/connexion" component={Connect} />
           <Route path="/inscription" component={Register} />
-          <DefaultRoute handler={NotFound} />
+          <Route path="*" component={NotFound} />
 
           <Footer />
         </div>
