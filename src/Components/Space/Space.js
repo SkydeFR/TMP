@@ -7,6 +7,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import { withRouter } from 'react-router';
 import './Space.css';
 
 
@@ -70,7 +71,10 @@ class Space extends Component {
 
   validateForm() {
     // erreurs possibles, affichées par des consoles.log() suivis de return; changer par un affichage IHM par la suite
-    if (localStorage.getItem('token') == null) console.log('Utilisateur non connecté.');
+    if (localStorage.getItem('token') == null) {
+      alert("Vous devez être connecter pour réserver !");
+      this.props.history.push('/connexion');
+    }
   }
 
   render() {
@@ -183,4 +187,4 @@ class Space extends Component {
   }
 }
 
-export default Space;
+export default withRouter(Space);

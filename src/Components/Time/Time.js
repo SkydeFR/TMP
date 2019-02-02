@@ -7,6 +7,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import { withRouter } from 'react-router';
 import './Time.css';
 
 
@@ -71,7 +72,11 @@ class Time extends Component {
 
   validateForm() {
     // erreurs possibles, affichées par des consoles.log() suivis de return; changer par un affichage IHM par la suite
-    if (localStorage.getItem('token') == null) console.log('Utilisateur non connecté.');
+    if (localStorage.getItem('token') == null) {
+      alert("Vous devez être connecter pour réserver !");
+      this.props.history.push('/connexion');
+    }
+
   }
 
   render() {
@@ -195,4 +200,4 @@ class Time extends Component {
   }
 }
 
-export default Time;
+export default withRouter(Time);
