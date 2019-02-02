@@ -7,7 +7,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>WSC Event</h1>
+        <h1 class="font-knewave">WSC Event</h1>
         <h2 class="sous-titre">Votre voyage commence maintenant</h2>
         <section id="voyages" class="dark-theme">
           <Container>
