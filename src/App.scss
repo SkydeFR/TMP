@@ -249,3 +249,17 @@ nav.navbar {
 .temoignage h4, .temoignage h5 {
   text-align: center;
 }
+
+#temps-epoques {
+  text-align: center;
+}
+#temps-epoques img {
+  max-height: 600px;
+}
+
+.carousel-caption h3 {
+  font-family: 'Knewave';
+  font-size: 3em !important;
+  color: $white !important;
+  text-shadow: 3px 3px 1px $bright-greek;
+}
