@@ -33,8 +33,8 @@ function getToken() {
 
 
 export default {
-  login: ((username, password) => api.post(`/users/signin`, {
-    username,
+  login: ((email, password) => api.post(`/users/signin`, {
+    email,
     password,
   }, {
     headers
@@ -58,29 +58,52 @@ export default {
     });
   }),
 
-  countUsers:(function(users) {
-    return new Promise((resolve, reject) => {
-      const options = (users === undefined) ? '' : JSON.stringify({status: users});
-      console.log(options);
-      api.get('/admin/users/count', {
-        params: {
-          token: getToken(),
-          options,
-        }
-      }, {headers})
-        .then(({data}) => {
-          resolve(data.users_count);
-        })
-        .catch((err) => {
-          if(err.response.data.code && err.response.data.code === 'no_admin') {
-            resolve(0);
-          }
-          else {
-            reject(err);
-          }
-        })
-    })
-  }),
+  /**
+   * @return {Promise<any>} Permet de récupérer les types d'événement.
+   */
+  getTypes: () => api.get('/types/get', {}, {headers}),
+
+  /**
+   * @param {Object} options Options à traiter (tableau intitulé nature, déterminant le type, 'espace' et/ou 'temps')
+   */
+  getDestinations: (options = {}) => api.get('/destinations/get', {options}, {headers}),
+
+  /**
+   * @param {String} token Token de l'utilisateur
+   * @param {String} nom Nom du type à créer.
+   */
+  createType: (token, nom) => api.post('/admin/type/add', {token, nom}, {headers}),
+  
+  /**
+   * @param {String} token Token de l'utilisateur.
+   * @param {Object} informations Informations de l'utilisateur.
+   * @param {String} informations.lieu Lieu de la destination.
+   */
+  createDestination: (token, informations) => api.post('/admin/destination/add', {token, ...informations}, {headers});
+
+  // countUsers:(function(users) {
+  //   return new Promise((resolve, reject) => {
+  //     const options = (users === undefined) ? '' : JSON.stringify({status: users});
+  //     console.log(options);
+  //     api.get('/admin/users/count', {
+  //       params: {
+  //         token: getToken(),
+  //         options,
+  //       }
+  //     }, {headers})
+  //       .then(({data}) => {
+  //         resolve(data.users_count);
+  //       })
+  //       .catch((err) => {
+  //         if(err.response.data.code && err.response.data.code === 'no_admin') {
+  //           resolve(0);
+  //         }
+  //         else {
+  //           reject(err);
+  //         }
+  //       })
+  //   })
+  // }),
 
   logout,
 };
