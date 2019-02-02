@@ -21,7 +21,7 @@ class Connect extends Component {
         <h2 class="sous-titre">Accédez à votre espace personnel</h2>
 
 
-        <section id="connexion">
+        <section id="connexion" class="dark-theme">
           <Container>
             <Row>
               <Col>

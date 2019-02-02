@@ -71,7 +71,7 @@ class Register extends Component {
                 <h1>Inscription</h1>
                 <h2 class="sous-titre">Rejoignez l'aventure WSC</h2>
 
-                <section id="inscription">
+                <section id="inscription" class="dark-theme">
                     <Container>
                         <Row>
                             <Col>
