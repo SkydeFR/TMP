@@ -30,7 +30,7 @@ class Footer extends Component {
                             </ul>
                         </Col>
                         <Col>
-                            <h5 className="font-knewave">WSC Team</h5>
+                            <h5 className="font-knewave">WSC'Team</h5>
                             <hr />
                             <ul className="list-unstyled">
                                 <li>Yan Buatois</li>
