@@ -121,12 +121,22 @@ class Register extends Component {
             this.props.history.push('/');
         }).catch(
             err => {
-                this.setState({
-                    valide: false,
-                    alertOpen: true,
-                    alertColor: 'danger',
-                    alertMessage: APIcodes(err.response.data.code),
-                })
+                if(!err.response || !err.response.data || !err.response.data.code) {
+                    this.setState({
+                        valide: false,
+                        alertOpen: true,
+                        alertColor: 'danger',
+                        alertMessage: err.message,
+                    });
+                } 
+                else {
+                    this.setState({
+                        valide: false,
+                        alertOpen: true,
+                        alertColor: 'danger',
+                        alertMessage: APIcodes[err.response.data.code],
+                    });
+                }
             }
         );
 
