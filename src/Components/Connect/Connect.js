@@ -4,6 +4,16 @@ import './Connect.css';
 import { Link } from 'react-router-dom';
 
 class Connect extends Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+  }
+
   render() {
     return (
       <div>
@@ -18,7 +28,7 @@ class Connect extends Component {
 
               </Col>
               <Col>
-                <Form>
+                <Form onSubmit={this.handleSubmit}>
                   <FormGroup>
                     <Label for="identifiant"><i class="material-icons">person</i> Identifiant</Label>
                     <Input type="text" name="identifiant" id="connexion-identifiant"></Input>

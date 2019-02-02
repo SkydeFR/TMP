@@ -50,6 +50,7 @@ class Book extends Component {
             <Button>Réserver</Button>
           </Form>
         </div>
+        <br />
       </div>
     );
   }
