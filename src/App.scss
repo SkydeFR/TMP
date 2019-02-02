@@ -277,11 +277,11 @@ nav.navbar {
 
 
 
-#espace-details h2 span {
+#espace-details h2 span, #temps-details h2 {
   font-family: 'Knewave';
 }
 
-#espace-details .row {
+#espace-details .row, #temps-details .row {
   margin: 0px 0px 60px 0px;
   border-radius: 20px;
   padding: 20px;
