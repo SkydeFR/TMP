@@ -125,8 +125,8 @@ class Time extends Component {
           <Container>
             <Row>
               <Col>
-                <h2>Choisissez votre époque</h2>
-                <h3>Lorem ipsum</h3>
+                <h2>Une large chronologie de choix</h2>
+                <h3>Ne laissez pas le présent vous retenir</h3>
                 <Carousel
                   activeIndex={activeIndex}
                   next={this.next}
