@@ -10,6 +10,13 @@ const codes = {
   invalid_username: "Votre nom d'utilisateur doit comprendre 3 à 255 caractères.",
   bad_credentials: "Vos identifiants de connexion sont incorrects.",
   unknown_issue: "Une erreur inconnue est survenue. Contactez un administrateur.",
+  existing_type: "Un type portant ce nom existe déjà.",
+  invalid_start_date: "La date de début est invalide.",
+  invalid_end_date: "La date de fin est invalide.",
+  end_before_start: "La date de fin se situe avant la date de début.",
+  existing_place: "Une destination portant ce nom existe déjà.",
+  invalid_type_ids: "L'identifiant d'un des types que vous avez choisi est incorrect.",
+  
 };
 
 export default new Proxy(codes, {
