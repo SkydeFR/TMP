@@ -43,28 +43,28 @@ class Home extends Component {
               <Col className="temoignage">
                 <h4 class="temoignage-nom">Alexandre Guidet</h4>
                 <h5 class="temoignage-destination">Mariage, Japon Impérial</h5>
-                <hr/>
+                <hr />
 
                 <p>
-                  De formidables liens se sont tissés avec les locaux notamment dans les petits villages entourant l'arène de Nephtis, notre fabuleux guide Hien était formidable ! Une expérience hors du commun qui marque et crée de beaux souvenirs.
+                  Nous retiendrons un merveilleux voyage, une vue lumineuse, une ambiance chaleureuse, un guide disponible et plein d'humour. Nous repartons les yeux et le coeur remplis de beaux souvenirs
                 </p>
               </Col>
 
               <Col className="temoignage">
                 <h4 class="temoignage-nom">Matthieu Simonet</h4>
                 <h5 class="temoignage-destination">Croisière Spatiale, Mars</h5>
-                <hr/>
+                <hr />
                 <p>
                   De formidables liens se sont tissés avec les locaux notamment dans les petits villages entourant l'arène de Nephtis, notre fabuleux guide Hien était formidable ! Une expérience hors du commun qui marque et crée de beaux souvenirs.
                 </p>
               </Col>
-              
+
               <Col className="temoignage">
                 <h4 class="temoignage-nom">Cristophe Nicolle</h4>
                 <h5 class="temoignage-destination">Anniversaire, Neptune</h5>
-                <hr/>
+                <hr />
                 <p>
-                  De formidables liens se sont tissés avec les locaux notamment dans les petits villages entourant l'arène de Nephtis, notre fabuleux guide Hien était formidable ! Une expérience hors du commun qui marque et crée de beaux souvenirs.
+                  Des expériences inoubliables tant sur la découverte d’un pays et d’une culture que sur le plan humain, un voyage extraordinaire ! Paysages, faune, flore et rencontres exceptionnelles. Voyage très riche à tous points de vue.
                 </p>
               </Col>
             </Row>
