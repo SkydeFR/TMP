@@ -103,7 +103,7 @@ class Time extends Component {
         <section id="temps-presentation" class="dark-theme">
           <Container>
             <Row>
-              <Col>
+              <Col sm="12" md="6">
                 <h2>Le Faucon Impérial</h2>
                 <h3>À travers les époques. Littéralement.</h3>
                 <p>
@@ -114,7 +114,7 @@ class Time extends Component {
                   De même, il ne peut pas voyager à une date antérieure au début de l'univers, ni postérieure à sa fin.
                 </p>
               </Col>
-              <Col>
+              <Col sm="12" md="6">
 
               </Col>
             </Row>
@@ -145,39 +145,39 @@ class Time extends Component {
         <section id="temps-details">
           <Container>
             <Row className="dark-theme">
-              <Col>
+              <Col sm="12" md="6">
                 <h2>Japon Impérial</h2>
                 <h3>XIX<sup>e</sup> Siècle</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
                   </p>                </Col>
-              <Col className="text-center m-auto">
+              <Col sm="12" md="6" className="text-center m-auto">
                 <h5 class="duree">3 jours</h5>
                 <h5 class="prix">$750.00</h5>
               </Col>
             </Row>
             <Row className="dark-theme">
-              <Col>
+              <Col sm="12" md="6">
                 <h2>Egypte Ancienne</h2>
                 <h3>-2000 av J.C.</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
                   </p>
               </Col>
-              <Col className="text-center m-auto">
+              <Col sm="12" md="6" className="text-center m-auto">
                 <h5 class="duree">10 jours</h5>
                 <h5 class="prix">$8,000.00</h5>
               </Col>
             </Row>
             <Row className="dark-theme">
-              <Col>
+              <Col sm="12" md="6">
                 <h2>Grèce Antique</h2>
                 <h3>V<sup>e</sup> Siècle av J.C.</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
                   </p>
               </Col>
-              <Col className="text-center m-auto">
+              <Col sm="12" md="6" className="text-center m-auto">
                 <h5 class="duree">38 jours</h5>
                 <h5 class="prix">$5,700.00</h5>
               </Col>
@@ -188,11 +188,11 @@ class Time extends Component {
         <section id="temps-reservation" class="blue-theme">
           <Container>
             <Row>
-              <Col>
+              <Col sm="12" md="6">
                 <h2>Réservations</h2>
                 <h3>Évènements temporels</h3>
               </Col>
-              <Col>
+              <Col sm="12" md="6">
                 <Form>
                   <Row>
                     <Col>
