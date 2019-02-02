@@ -20,10 +20,10 @@ class Home extends Component {
               </Col>
             </Row>
             <Row>
-              <Col className='text-center'>
+              <Col className='text-center pt-4'>
                 <Button tag={Link} to='/temps'>Voyager dans le Temps</Button>
               </Col>
-              <Col className='text-center'>
+              <Col className='text-center pt-4'>
                 <Button tag={Link} to='/espace'>Voyager dans l'Espace</Button>
               </Col>
             </Row>
