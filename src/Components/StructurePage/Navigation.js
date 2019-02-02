@@ -24,6 +24,7 @@ class Navigation extends Component {
             isOpen: false,
             title: "WSC Event"
         }
+
     }
 
     toggle() {
@@ -35,8 +36,11 @@ class Navigation extends Component {
     render() {
         return (
             <div>
-                <Navbar color='light' light expand="md">
-                    <NavbarBrand tag={Link} to="/">{this.state.title}</NavbarBrand>
+                <Navbar className="dark-theme" color='light' light expand="md">
+                    <NavbarBrand tag={Link} to="/">
+                        <img id="navbar-logo" src={require('../../media/image/logo.png')}></img>
+                        {this.state.title}
+                    </NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>        
