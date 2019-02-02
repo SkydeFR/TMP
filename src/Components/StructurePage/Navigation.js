@@ -43,7 +43,8 @@ class Navigation extends Component {
                     </NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>        
+                        <Nav className="ml-auto" navbar>
+                            <NavbarElem link='/' title='Accueil' />
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                 Destinations
@@ -57,7 +58,6 @@ class Navigation extends Component {
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
-                            <NavbarElem link='/reserver' title='Réserver' />
                             <NavbarElem link='/connexion' title='Connexion' />
                             <NavbarElem link='/inscription' title="Inscription" />
                         </Nav>

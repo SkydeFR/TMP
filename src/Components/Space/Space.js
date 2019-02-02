@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import {
   Carousel,
   CarouselItem,
@@ -104,12 +104,12 @@ class Space extends Component {
           </Container>
         </section>
 
-        <section id="espace-croisières">
+        <section id="espace-croisieres">
           <Container>
             <Row>
               <Col>
-              <h2>Choisissez votre époque</h2>
-              <h3>Lorem ipsum</h3>
+              <h2>Des croisières d'exception</h2>
+              <h3>Jusqu'aux confins du Système Solaire</h3>
                 <Carousel
                   activeIndex={activeIndex}
                   next={this.next}
@@ -120,6 +120,50 @@ class Space extends Component {
                   <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
                   <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
                 </Carousel>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        <section id="espace-reservation" class="blue-theme">
+          <Container>
+            <Row>
+              <Col>
+              <h2>Réservations</h2>
+              <h3>Croisières stellaires</h3>
+              </Col>
+              <Col>
+                <Form>
+                  <FormGroup>
+                    <Label for="evenement"><i class="material-icons">map</i> Croisière</Label>
+                    <Input type="select" name="evenement" id="espace-evenement" placeholder="Evénement">
+                      <option>Croisière « Orbital »</option>
+                      <option>Croisière « Sunlight »</option>
+                      <option>Croisière « Jovian »</option>
+                    </Input>
+                  </FormGroup>
+
+                  <Row>
+                    <Col>
+                      <FormGroup>
+                        <Label for="date"><i class="material-icons">date_range</i> Date de départ</Label>
+                        <Input type="date" name="date" id="espace-date" placeholder="DateReservee" />
+                      </FormGroup>
+                    </Col>
+                    <Col>
+                    <FormGroup>
+                      <Label for="nbpersonnes"><i class="material-icons">people</i> Nombre de personnes</Label>
+                      <Input type="number" name="nbpersonnes" id="espace-nbpersonnes" placeholder="0" />
+                    </FormGroup>
+                    </Col>
+                  </Row>
+                
+                  <Row className="text-center">
+                    <Col>
+                      <Button className="reservation">Réserver <i class="material-icons">check</i></Button>
+                    </Col>
+                  </Row>
+                </Form>
               </Col>
             </Row>
           </Container>

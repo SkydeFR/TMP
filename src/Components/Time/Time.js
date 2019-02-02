@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import {
   Carousel,
   CarouselItem,
@@ -18,8 +18,8 @@ const items = [
   },
   {
     src: require('../../media/image/temps/carousel/egypte-ancienne.png'),
-    altText: 'Egypte Antique',
-    caption: 'Egypte Antique'
+    altText: 'Egypte Ancienne',
+    caption: 'Egypte Ancienne'
   },
   {
     src: require('../../media/image/temps/carousel/grece-antique.png'),
@@ -126,6 +126,64 @@ class Time extends Component {
             </Row>
           </Container>
         </section>
+
+        <section id="temps-reservation" class="blue-theme">
+          <Container>
+            <Row>
+              <Col>
+              <h2>Réservations</h2>
+              <h3>Évènements temporels</h3>
+              </Col>
+              <Col>
+                <Form>
+                  <Row>
+                    <Col>
+                      <FormGroup>
+                        <Label for="evenement"><i class="material-icons">whatshot</i> Évènement</Label>
+                        <Input type="select" name="evenement" id="temps-evenement" placeholder="Evénement">
+                          <option>Mariage</option>
+                          <option>Aniversaire</option>
+                          <option>Croisière « Jovian »</option>
+                        </Input>
+                      </FormGroup>
+                    </Col>
+                    <Col>
+                      <FormGroup>
+                        <Label for="epoque"><i class="material-icons">map</i> Voyage temporel</Label>
+                        <Input type="select" name="epoque" id="temps-epoque" placeholder="Evénement">
+                          <option>Japon Impérial</option>
+                          <option>Egypte Ancienne</option>
+                          <option>Grèce Antique</option>
+                        </Input>
+                      </FormGroup>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <FormGroup>
+                        <Label for="date"><i class="material-icons">date_range</i> Date de réservation</Label>
+                        <Input type="date" name="date" id="temps-date" placeholder="DateReservee" />
+                      </FormGroup>
+                    </Col>
+                    <Col>
+                    <FormGroup>
+                      <Label for="nbpersonnes"><i class="material-icons">people</i> Nombre de personne(s)</Label>
+                      <Input type="number" name="nbpersonnes" id="temps-nbpersonnes" placeholder="0" />
+                    </FormGroup>
+                    </Col>
+                  </Row>
+                
+                  <Row className="text-center">
+                    <Col>
+                      <Button className="reservation">Réserver <i class="material-icons">check</i></Button>
+                    </Col>
+                  </Row>
+                </Form>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
       </div>
     );
   }
