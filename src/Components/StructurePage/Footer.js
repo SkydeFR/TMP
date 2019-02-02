@@ -24,7 +24,7 @@ class Footer extends Component {
                         <div class="col-md-3 mx-auto">
                             <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Editeur</h5>
                             <ul class="list-unstyled">
-                                <li>Les Témoins de JavaScript :</li>
+                                <li><a href="/~temoins/#equipe">Les Témoins de JavaScript</a></li>
                                 <li>- Yan BUATOIS</li>
                                 <li>- Ange PAGEL</li>
                                 <li>- Kévin KIBONGUI</li>
@@ -50,10 +50,10 @@ class Footer extends Component {
                         <div class="col-md-3 mx-auto">
                             <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Hébergeur</h5>
                             <ul class="list-unstyled">
-                                <li>ESIREM</li>
+                                <li><a href="http://esirem.u-bourgogne.fr/">ESIREM</a></li>
                                 <li>9 Avenue Alain Savary,</li>
                                 <li>21000 Dijon</li>
-                                <li>+33 3 80 39 60 09</li>
+                                <li><a href="tel:33380396009">+33 3 80 39 60 09</a></li>
                             </ul>
                         </div>
 
