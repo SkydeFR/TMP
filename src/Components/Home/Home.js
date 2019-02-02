@@ -15,7 +15,7 @@ class Home extends Component {
                 <h2>Le temps et l'espace</h2>
                 <h3>Sont à votre portée</h3>
                 <p>
-                  Bacon ipsum dolor amet leberkas pork loin shankle jerky ham hock turkey ham meatloaf t-bone tongue spare ribs hamburger corned beef ball tip. Meatloaf cupim doner corned beef t-bone pork meatball swine shoulder brisket alcatra chicken turducken tenderloin. Beef spare ribs tail kevin alcatra ball tip short ribs. Jerky strip steak pork prosciutto pork loin hamburger chuck. Shoulder ground round pork belly strip steak, pig andouille hamburger leberkas filet mignon beef kevin brisket burgdoggen. Beef ribs shoulder brisket biltong tail venison salami tenderloin doner.
+                  À l'aide de nos deux dernières technologies de pointe, le Faucon Imperial et le Mega Stardust 5210, deux prestations exclusives sont désormais disponibles chez WSC Event ! Il est désormais possible de voyager en toute sécurité dans une infinité d'époques différentes à bord du Faucon Imperial ainsi que d'effectuer des voyages spatiaux tout confort à l'intérieur de notre système solaire sous la forme d'une croisière au sein du Mega Stardust 5210.
                 </p>
               </Col>
             </Row>
@@ -41,7 +41,7 @@ class Home extends Component {
             <Row>
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-1.png')}></img>
-                <h4 className="temoignage-nom">Alexandre Guidet</h4>
+                <h4 className="temoignage-nom">Auriane Diot</h4>
                 <h5 className="temoignage-destination">Mariage, Japon Impérial</h5>
                 <hr />
 
@@ -62,7 +62,7 @@ class Home extends Component {
 
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-3.png')}></img>
-                <h4 className="temoignage-nom">Christophe Nicolle</h4>
+                <h4 className="temoignage-nom">Leslie Delphoi</h4>
                 <h5 className="temoignage-destination">Aniversaire, Grèce Antique</h5>
                 <hr />
                 <p>
