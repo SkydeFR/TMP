@@ -113,7 +113,7 @@ class Space extends Component {
                 </p>
               </Col>
               <Col sm="12" md="6">
-
+                <img src={require('../../media/image/espace/presentation.jpg')}></img>
               </Col>
             </Row>
           </Container>

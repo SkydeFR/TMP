@@ -336,3 +336,9 @@ nav.navbar {
   margin-bottom :auto !important;
   font-size: 19em;
 }
+
+#espace-presentation img, #temps-presentation img {
+  max-width: 100%;
+  border: none;
+  border-radius: 20px;
+}

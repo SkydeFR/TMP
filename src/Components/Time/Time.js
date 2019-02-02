@@ -115,7 +115,7 @@ class Time extends Component {
                 </p>
               </Col>
               <Col sm="12" md="6">
-
+                <img src={require('../../media/image/temps/presentation.jpg')}></img>
               </Col>
             </Row>
           </Container>
