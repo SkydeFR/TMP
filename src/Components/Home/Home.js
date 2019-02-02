@@ -34,19 +34,35 @@ class Home extends Component {
               <Col>
                 <h2>Les témoignages</h2>
                 <h3>Une satisfaction qui nous tient à coeur</h3>
-                <p>Nous retiendrons un merveilleux voyage, une vue lumineuse, une ambiance chaleureuse, un guide disponible et plein d'humour. Nous repartons les yeux et le coeur remplis de beaux souvenirs.
-                  <br />
-                  <span className="text-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Julie et Kévin, week-end à la Plate-Forme Spaciale "Une" ~ Les derniers instants de la Terre</span>
-                </p>
-                <p>De formidables liens se sont tissés avec les locaux notamment dans les petits villages entourant l'arène de Nephtis, notre fabuleux guide Hien était formidable ! Une expérience hors du commun qui marque et crée de beaux souvenirs.
-                  <br />
-                  <span className="text-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Steven, une semaine sur le satellite SkarlinGrad D8, District "NoSurvival" ~ Combats à morts et visite des villages locaux</span>
-                </p>
-                <p>Voyage extraordinaire et nous pesons nos mots !!! Paysages, faune, flore et rencontres exceptionnelles. Voyage très riche à tous points de vue.
-                  <br />
-                  <span className="text-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Lucie et Niels avec leurs enfants, 2 semaines sur la planète Moohn ~ Sortie culturelle au sein de la forêt Stelia</span>
-                </p>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="temoignage">
+                <h4 class="temoignage-nom">Alexandre Guidet</h4>
+                <h5 class="temoignage-destination">Mariage, Japon Impérial</h5>
+                <hr/>
 
+                <p>
+                  De formidables liens se sont tissés avec les locaux notamment dans les petits villages entourant l'arène de Nephtis, notre fabuleux guide Hien était formidable ! Une expérience hors du commun qui marque et crée de beaux souvenirs.
+                </p>
+              </Col>
+
+              <Col className="temoignage">
+                <h4 class="temoignage-nom">Matthieu Simonet</h4>
+                <h5 class="temoignage-destination">Croisière Spatiale, Mars</h5>
+                <hr/>
+                <p>
+                  De formidables liens se sont tissés avec les locaux notamment dans les petits villages entourant l'arène de Nephtis, notre fabuleux guide Hien était formidable ! Une expérience hors du commun qui marque et crée de beaux souvenirs.
+                </p>
+              </Col>
+              
+              <Col className="temoignage">
+                <h4 class="temoignage-nom">Cristophe Nicolle</h4>
+                <h5 class="temoignage-destination">Anniversaire, Neptune</h5>
+                <hr/>
+                <p>
+                  De formidables liens se sont tissés avec les locaux notamment dans les petits villages entourant l'arène de Nephtis, notre fabuleux guide Hien était formidable ! Une expérience hors du commun qui marque et crée de beaux souvenirs.
+                </p>
               </Col>
             </Row>
 
