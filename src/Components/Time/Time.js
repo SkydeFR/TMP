@@ -8,7 +8,6 @@ import {
   CarouselCaption
 } from 'reactstrap';
 import { withRouter } from 'react-router';
-import './Time.css';
 
 
 const items = [

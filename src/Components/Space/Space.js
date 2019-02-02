@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Form, FormGroup, Label, Button, Input, } from 'reactstrap';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, CardTitle, CardText } from 'reactstrap';
 import {
   Carousel,
   CarouselItem,
@@ -9,8 +8,6 @@ import {
   CarouselCaption
 } from 'reactstrap';
 import { withRouter } from 'react-router';
-import classnames from 'classnames';
-import './Space.css';
 
 
 const items = [

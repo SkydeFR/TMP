@@ -22,7 +22,7 @@ class Footer extends Component {
                     <Row>
                         <Col>
                             <h5 class="font-knewave">WSC Event</h5>
-                            <hr/>
+                            <hr />
                             <ul class="list-unstyled">
                                 <li><ReactLink tag={BootstrapLink} to="/connexion">Espace Personnel</ReactLink></li>
                                 <li><ReactLink tag={BootstrapLink} to="/destinations">Le Temps</ReactLink></li>
@@ -32,7 +32,7 @@ class Footer extends Component {
                         </Col>
                         <Col>
                             <h5 class="font-knewave">WSC Team</h5>
-                            <hr/>
+                            <hr />
                             <ul class="list-unstyled">
                                 <li>Yan Buatois</li>
                                 <li>Kévin Kibongui</li>
@@ -42,17 +42,17 @@ class Footer extends Component {
                         </Col>
                         <Col>
                             <h5>Réseaux</h5>
-                            <hr/>
+                            <hr />
                             <ul class="list-unstyled">
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Instagram</a></li>
-                                <li><a href="#">Pinterest</a></li>
-                                <li><a href="#">LinkedIn</a></li>
+                                <li><a href="javascript:void(0);">Twitter</a></li>
+                                <li><a href="javascript:void(0);">Instagram</a></li>
+                                <li><a href="javascript:void(0);">Pinterest</a></li>
+                                <li><a href="javascript:void(0);">LinkedIn</a></li>
                             </ul>
                         </Col>
                         <Col>
                             <h5>Hébergeur</h5>
-                            <hr/>
+                            <hr />
                             <ul class="list-unstyled">
                                 <li><a href="http://esirem.u-bourgogne.fr/">ESIREM</a></li>
                                 <li>9 Avenue Alain Savary,</li>

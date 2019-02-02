@@ -47,7 +47,7 @@ class Navigation extends Component {
                             <NavbarElem link='/' title='Accueil' />
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
-                                Destinations
+                                    Destinations
                                 </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
