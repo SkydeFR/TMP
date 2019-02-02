@@ -4,6 +4,8 @@ import './Register.css';
 import * as EmailValidator from 'email-validator';
 import { Link } from 'react-router-dom';
 import api from '../../utils/api.js';
+import { Alert } from 'reactstrap';
+import APIcodes from '../../utils/APIcodes';
 
 
 class Register extends Component {
@@ -13,6 +15,7 @@ class Register extends Component {
 
         // Initialisation de tous les différents champs
         this.state = {
+            valide: false,
             inscription_prenom: '',
             inscription_nom: '',
             inscription_mail: '',
@@ -20,55 +23,84 @@ class Register extends Component {
             inscription_date_naissance: '',
             inscription_numero_telephone: '',
             inscription_mot_de_passe: '',
-            inscription_confirmation: ''
+            inscription_confirmation: '',
+            alertOpen: false,
+            alertMessage: '',
+            alertColor: 'success'
         };
 
         this.validateForm = this.validateForm.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.toggleAlert = this.toggleAlert.bind(this);
   
     }
 
     validateForm() {
 
+        this.setState({
+            valide: false,
+            alertOpen: true,
+            alertColor: "danger"
+        })
+
         // erreurs possibles, affichées par des consoles.log() suivis de return; changer par un affichage IHM par la suite
         if (this.state.inscription_prenom === '') {
-            console.log('Prénom vide.');
+            this.setState({
+                alertMessage: 'Prénom vide.'
+            })
             return;
         }
         if (this.state.inscription_nom === '') {
-            console.log('Nom vide.');
+            this.setState({
+                alertMessage: 'Nom vide.'
+            })
             return;
         } 
         if (this.state.inscription_mail === '') {
-            console.log('Mail vide.');
+            this.setState({
+                alertMessage: 'Mail vide.'
+            })
             return;
         }
         if (!EmailValidator.validate(this.state.inscription_mail)) {
-            console.log('Mail invalide.');
+            this.setState({
+                alertMessage: 'Mail invalide.'
+            })
             return;
         }
         if (this.state.inscription_date_naissance === '') {
-            console.log('Date de naissance invalide.');
+            this.setState({
+                alertMessage: 'Date de naissance invalide.'
+            })
             return;
         }
         if (this.state.inscription_numero_telephone === '') {
-            console.log('Numéro de téléphone invalide.');
+            this.setState({
+                alertMessage: 'Numéro de téléphone invalide.'
+            })
             return;
         }
         if (this.state.inscription_mot_de_passe === '') {
-            console.log('Mot de passe vide.');
+            this.setState({
+                alertMessage: 'Mot de passe vide.'
+            })
             return;
         }
         if (this.state.inscription_confirmation === '') {
-            console.log('Confirmation du mot de passe vide.');
+            this.setState({
+                alertMessage: 'Confirmation du mot de passe vide.'
+            })
             return;
         }
         if (this.state.inscription_mot_de_passe !== this.state.inscription_confirmation) {
-            console.log('Les deux mots de passe ne sont pas identiques.');
+            this.setState({
+                alertMessage: 'Les deux mots de passe ne sont pas identiques.'
+            })
             return;
         }
 
         // Everything is valid, make the API request
+
 
         let user = {
             prenom: this.state.inscription_prenom,
@@ -78,35 +110,39 @@ class Register extends Component {
             phone: this.state.inscription_numero_telephone
         }
 
-        api.signup(user).then(
-            console.log('xD !!!!!!!!')
-        ).catch(
+        api.signup(user).then(({data}) => {
+            this.setState({
+                valide: true,
+                alertColor: 'success',
+                alertMessage: 'L\'inscription a réussi !',
+                alertOpen: true,
+            });
+            api.saveToken(data.token);
+            this.props.history.push('/');
+        }).catch(
             err => {
-                console.log(err.response.data);
-                console.error(err)
+                this.setState({
+                    valide: false,
+                    alertOpen: true,
+                    alertColor: 'danger',
+                    alertMessage: APIcodes(err.response.data.code),
+                })
             }
         );
 
+    }
+
+    toggleAlert() {
+        this.setState({alertOpen: false});
     }
 
     handleChange = event => {
         this.setState({
             [event.target.id]: event.target.value
         });
-
-        /*
-        if(this.state[event.target.id + "Valide"] === 2) {
-          this.testChange(event);
-        }
-    
-        if(event.target.id === 'password') {
-          if(this.state.cpasswordValide === 1 || this.state.cpasswordValide === 2)
-          {
-            this.setState({cpasswordValide: 0});
-          }
-        }
-        */
     }
+
+
 
     render() {
         return (
@@ -188,6 +224,8 @@ class Register extends Component {
                                         </Col>
                                     </Row>
 
+                                    <Alert color={this.state.alertColor} isOpen={this.state.alertOpen} toggle={this.toggleAlert}>{this.state.alertMessage}</Alert>
+
                                     <Button onClick={this.validateForm}>Inscription</Button>
                                 </Form>
                                 <p>Vous avez déjà un compte ? <Link to={'/connexion'}>Connectez-vous !</Link></p>
@@ -201,5 +239,35 @@ class Register extends Component {
         );
     }
 }
+
+// class AlertComp extends Component {
+
+//     constructor(props) {
+//         super(props);
+
+//         this.state = {
+//             visible: true,
+//             color: this.props.color,
+//             text: this.props.text
+//         }
+//     }
+
+//     render() {
+//         let res = <div></div>;
+
+//         if (this.state.visible) {
+//             res = (
+//             <Alert color={this.state.color}>
+//                 {this.state.text}
+//             </Alert>
+//             );
+//         }
+
+//         return res;
+
+        
+//     }
+
+// }
 
 export default Register;

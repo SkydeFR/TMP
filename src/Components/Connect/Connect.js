@@ -31,12 +31,12 @@ class Connect extends Component {
                 <Form onSubmit={this.handleSubmit}>
                   <FormGroup>
                     <Label for="identifiant"><i class="material-icons">person</i> Identifiant</Label>
-                    <Input type="text" name="identifiant" id="connexion-identifiant"></Input>
+                    <Input type="text" name="identifiant" id="connexion-identifiant" />
                   </FormGroup>
 
                   <FormGroup>
                     <Label for="mot-de-passe"><i class="material-icons">security</i> Mot de passe</Label>
-                    <Input type="password" name="mot-de-passe" id="connexion-mot-de-passe"></Input>
+                    <Input type="password" name="mot-de-passe" id="connexion-mot-de-passe" />
                   </FormGroup>
 
                   <Button>Connexion</Button>
