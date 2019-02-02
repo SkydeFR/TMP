@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1 className="font-knewave">WSC Event</h1>
+        <h1 className="font-knewave">WSC'Event</h1>
         <h2 className="sous-titre">Votre voyage commence maintenant</h2>
         <section id="voyages" className="dark-theme">
           <Container>
@@ -15,7 +15,7 @@ class Home extends Component {
                 <h2>Le temps et l'espace</h2>
                 <h3>Sont à votre portée</h3>
                 <p>
-                  Bacon ipsum dolor amet leberkas pork loin shankle jerky ham hock turkey ham meatloaf t-bone tongue spare ribs hamburger corned beef ball tip. Meatloaf cupim doner corned beef t-bone pork meatball swine shoulder brisket alcatra chicken turducken tenderloin. Beef spare ribs tail kevin alcatra ball tip short ribs. Jerky strip steak pork prosciutto pork loin hamburger chuck. Shoulder ground round pork belly strip steak, pig andouille hamburger leberkas filet mignon beef kevin brisket burgdoggen. Beef ribs shoulder brisket biltong tail venison salami tenderloin doner.
+                  À l'aide de nos deux dernières technologies de pointe, le Faucon Imperial et le Mega Stardust 5210, deux prestations exclusives sont désormais disponibles chez WSC'Event ! Il est désormais possible de voyager en toute sécurité dans une infinité d'époques différentes à bord du Faucon Imperial ainsi que d'effectuer des voyages spatiaux tout confort à l'intérieur de notre système solaire sous la forme d'une croisière au sein du Mega Stardust 5210.
                 </p>
               </Col>
             </Row>
@@ -41,7 +41,7 @@ class Home extends Component {
             <Row>
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-1.png')}></img>
-                <h4 className="temoignage-nom">Alexandre Guidet</h4>
+                <h4 className="temoignage-nom">Auriane Diot</h4>
                 <h5 className="temoignage-destination">Mariage, Japon Impérial</h5>
                 <hr />
 
@@ -52,7 +52,7 @@ class Home extends Component {
 
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-2.png')}></img>
-                <h4 className="temoignage-nom">Matthieu Simonet</h4>
+                <h4 className="temoignage-nom">Bruce Stark</h4>
                 <h5 className="temoignage-destination">Croisière « Jovian »</h5>
                 <hr />
                 <p>
@@ -62,8 +62,8 @@ class Home extends Component {
 
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-3.png')}></img>
-                <h4 className="temoignage-nom">Christophe Nicolle</h4>
-                <h5 className="temoignage-destination">Aniversaire, Grèce Antique</h5>
+                <h4 className="temoignage-nom">Leslie Delphoi</h4>
+                <h5 className="temoignage-destination">Anniversaire, Grèce Antique</h5>
                 <hr />
                 <p>
                   Des expériences inoubliables tant sur la découverte d’un pays et d’une culture que sur le plan humain, un voyage extraordinaire ! Paysages, faune, flore et rencontres exceptionnelles. Voyage très riche à tous points de vue.
@@ -84,7 +84,7 @@ class Home extends Component {
                 <h2>La WSC Team</h2>
                 <h3>Une dévotion sans limite</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
+                  La WSC Team est composée des plus fervants Témoins de JavaScript. Elle est à ce jour constituée des ingénieurs <b>Y. Buatois</b>, <b>K. Kibongui</b>, <b>A. Pagel</b> et <b>J. Pinto Da Fonseca</b>.
                 </p>
               </Col>
             </Row>

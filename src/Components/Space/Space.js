@@ -106,7 +106,9 @@ class Space extends Component {
                 <h2>Le Mega Stardust 5210</h2>
                 <h3>Le Système Solaire à vol d'oiseau</h3>
                 <p>
-                  Lorem ipsum
+                  Le Mega Stardut 5210 est notre tout dernier projet en date à succès ! Imposant, le MS5210 mesures 375 mètres de long avec une hauteur de 275 mètres pour 10 étages. Celui-ci peut accueilir jusqu'à 150 passagers et 50 employés SWC'Event.
+                  <br /><br />
+                  Grâce à ce vaisseau il est possible d'effectuer des voyages spatiaux tout confort à l'intérieur de notre système solaire sous la forme d'une croisière.
                 </p>
               </Col>
               <Col>

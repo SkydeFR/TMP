@@ -305,6 +305,12 @@ nav.navbar {
   margin: 0px 0px 60px 0px;
   border-radius: 20px;
   padding: 20px;
+  transition: 0.5s;
+}
+
+#espace-details .row:hover, #temps-details .row:hover {
+  box-shadow: 0 0 15px $ufo-green;
+  transition: 0.5s;
 }
 
 .prix {
