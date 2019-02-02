@@ -1,5 +1,4 @@
 import axios from 'axios';
-import config from '../config';
 import { setupCache } from 'axios-cache-adapter';
 
 const headers = {
