@@ -230,11 +230,14 @@ nav.navbar {
   margin-top: 10px;
   margin-bottom: 10px;
   transition: 0.5s !important;
+  transition: 0.3s !important;
 }
 
 .btn-secondary:hover {
   box-shadow: 0 0 11px $saturated-sky;
-  transition: 0.5s !important;
+  transition: 0.3s !important;
+}
+
 }
 
 .temoignage {
