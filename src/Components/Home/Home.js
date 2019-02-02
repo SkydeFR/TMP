@@ -59,8 +59,8 @@ class Home extends Component {
               </Col>
 
               <Col className="temoignage">
-                <h4 className="temoignage-nom">Cristophe Nicolle</h4>
-                <h5 className="temoignage-destination">Anniversaire, Neptune</h5>
+                <h4 class="temoignage-nom">Christophe Nicolle</h4>
+                <h5 class="temoignage-destination">Anniversaire, Neptune</h5>
                 <hr />
                 <p>
                   Des expériences inoubliables tant sur la découverte d’un pays et d’une culture que sur le plan humain, un voyage extraordinaire ! Paysages, faune, flore et rencontres exceptionnelles. Voyage très riche à tous points de vue.
