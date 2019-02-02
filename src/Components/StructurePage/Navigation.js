@@ -63,7 +63,7 @@ class Navigation extends Component {
                         </Nav>
                     </Collapse>
                 </Navbar>
-                <div class="nav-underline"></div>
+                <div className="nav-underline"></div>
             </div>
         )
     }
