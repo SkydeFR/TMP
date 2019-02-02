@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
   render() {
@@ -21,10 +22,10 @@ class Home extends Component {
             </Row>
             <Row>
               <Col className='text-center'>
-                <Button>Voyager dans le Temps</Button>
+                <Button tag={Link} to='/temps'>Voyager dans le Temps</Button>
               </Col>
               <Col className='text-center'>
-                <Button>Voyager dans l'Espace</Button>
+                <Button tag={Link} to='/espace'>Voyager dans l'Espace</Button>
               </Col>
             </Row>
           </Container>
