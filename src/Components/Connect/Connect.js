@@ -22,66 +22,66 @@ class Connect extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-  
-      const user = {
-        email: this.state.email,
-        password: this.state.password
-      }
 
-      if(!this.state.email) {
-        this.setState({
-          valide: false,
-          alertColor: 'danger',
-          alertMessage: 'Vous devez spécifier une adresse mail.',
-          alertOpen: true,
-        });
-        return;
-      }
+    const user = {
+      email: this.state.email,
+      password: this.state.password
+    }
 
-      if(!this.state.password) {
-        this.setState({
-          valide: false,
-          alertColor: 'danger',
-          alertMessage: 'Vous devez spécifier un mot de passe.',
-          alertOpen: true,
-        });
-        return;
-      }
+    if (!this.state.email) {
+      this.setState({
+        valide: false,
+        alertColor: 'danger',
+        alertMessage: 'Vous devez spécifier une adresse mail.',
+        alertOpen: true,
+      });
+      return;
+    }
 
-      api.login(user.email, user.password).then(({data}) => {
+    if (!this.state.password) {
+      this.setState({
+        valide: false,
+        alertColor: 'danger',
+        alertMessage: 'Vous devez spécifier un mot de passe.',
+        alertOpen: true,
+      });
+      return;
+    }
+
+    api.login(user.email, user.password).then(({ data }) => {
+      this.setState({
+        valide: true,
+        alertColor: 'success',
+        alertMessage: 'La connexion a réussi !',
+        alertOpen: true,
+      });
+      api.saveToken(data.token);
+      this.props.history.push('/');
+    }).catch(
+      err => {
+        if (err.response && err.response.data) {
           this.setState({
-              valide: true,
-              alertColor: 'success',
-              alertMessage: 'La connexion a réussi !',
-              alertOpen: true,
+            valide: false,
+            alertOpen: true,
+            alertColor: 'danger',
+            alertMessage: APIcodes[err.response.data.code],
+          })
+        }
+        else {
+          this.setState({
+            valide: false,
+            alertOpen: true,
+            alertColor: 'danger',
+            alertMessage: err.message,
           });
-          api.saveToken(data.token);
-          this.props.history.push('/');
-      }).catch(
-          err => {
-            if(err.response && err.response.data) {
-              this.setState({
-                  valide: false,
-                  alertOpen: true,
-                  alertColor: 'danger',
-                  alertMessage: APIcodes[err.response.data.code],
-              })
-            }
-            else {
-              this.setState({
-                valide: false,
-                alertOpen: true,
-                alertColor: 'danger',
-                alertMessage: err.message,
-              });
-            }
-          }
-      );
+        }
+      }
+    );
   }
 
   handleChange = event => {
     this.setState({
-        [event.target.id]: event.target.value
+      [event.target.id]: event.target.value
     });
   }
 
@@ -96,7 +96,7 @@ class Connect extends Component {
           <Container>
             <Row>
               <Col sm="12" md="6" className="text-center m-auto">
-                  <i className="material-icons bigicon">whatshot</i>
+                <i className="material-icons bigicon">whatshot</i>
               </Col>
               <Col sm="12" md="6">
                 <Form onSubmit={this.handleSubmit}>
@@ -117,8 +117,8 @@ class Connect extends Component {
                 </Form>
                 <p>
                   Vous n'avez pas de compte ? <Link to={'/inscription'}>Créez-en un !</Link>
-                  <br/>
-                  <a href="#">Compte perdu.</a>
+                  <br />
+                  <a href="javascript:void(0);">Compte perdu.</a>
                 </p>
               </Col>
             </Row>

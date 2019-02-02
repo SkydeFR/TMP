@@ -32,7 +32,7 @@ class Register extends Component {
         this.validateForm = this.validateForm.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.toggleAlert = this.toggleAlert.bind(this);
-  
+
     }
 
     validateForm() {
@@ -55,7 +55,7 @@ class Register extends Component {
                 alertMessage: 'Nom vide.'
             })
             return;
-        } 
+        }
         if (this.state.inscription_mail === '') {
             this.setState({
                 alertMessage: 'Mail vide.'
@@ -110,7 +110,7 @@ class Register extends Component {
             phone: this.state.inscription_numero_telephone
         }
 
-        api.signup(user).then(({data}) => {
+        api.signup(user).then(({ data }) => {
             this.setState({
                 valide: true,
                 alertColor: 'success',
@@ -121,14 +121,14 @@ class Register extends Component {
             this.props.history.push('/');
         }).catch(
             err => {
-                if(!err.response || !err.response.data || !err.response.data.code) {
+                if (!err.response || !err.response.data || !err.response.data.code) {
                     this.setState({
                         valide: false,
                         alertOpen: true,
                         alertColor: 'danger',
                         alertMessage: err.message,
                     });
-                } 
+                }
                 else {
                     this.setState({
                         valide: false,
@@ -143,7 +143,7 @@ class Register extends Component {
     }
 
     toggleAlert() {
-        this.setState({alertOpen: false});
+        this.setState({ alertOpen: false });
     }
 
     handleChange = event => {
@@ -167,7 +167,7 @@ class Register extends Component {
                         <Row>
                             <Col sm="12" md="6" className="text-center m-auto">
                                 <i className="material-icons bigicon">sms</i>
-                                <p className="w-75 m-auto">En vous inscrivant, vous confirmez avoir lu, compris et accepté les <a href="#">Conditions d'utilisation</a> et la <a href="#">Politique de confidentialité</a> ainsi qu'être informé(e) de votre droit à l'information.</p>
+                                <p className="w-75 m-auto">En vous inscrivant, vous confirmez avoir lu, compris et accepté les <a href="javascript:void(0);">Conditions d'utilisation</a> et la <a href="javascript:void(0);">Politique de confidentialité</a> ainsi qu'être informé(e) de votre droit à l'information.</p>
                             </Col>
                             <Col sm="12" md="6">
                                 <Form>
@@ -277,7 +277,7 @@ class Register extends Component {
 
 //         return res;
 
-        
+
 //     }
 
 // }
