@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Button, Input,  } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, CardTitle, CardText} from 'reactstrap';
 import {
   Carousel,
   CarouselItem,
@@ -7,7 +8,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
-import { withRouter } from 'react-router';
+import classnames from 'classnames';
 import './Space.css';
 
 
@@ -27,7 +28,7 @@ const items = [
     altText: 'Système Solaire',
     caption: 'Système Solaire'
   }
-
+  
 ];
 
 class Space extends Component {
@@ -40,8 +41,6 @@ class Space extends Component {
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
-
-    this.validateForm = this.validateForm.bind(this);
   }
 
   onExiting() {
@@ -69,14 +68,7 @@ class Space extends Component {
     this.setState({ activeIndex: newIndex });
   }
 
-  validateForm() {
-    // erreurs possibles, affichées par des consoles.log() suivis de return; changer par un affichage IHM par la suite
-    if (localStorage.getItem('token') == null) {
-      alert("Vous devez être connecter pour réserver !");
-      this.props.history.push('/connexion');
-    }
-  }
-
+  
   render() {
 
     const { activeIndex } = this.state;
@@ -119,8 +111,8 @@ class Space extends Component {
           <Container>
             <Row>
               <Col>
-                <h2>Des croisières d'exception</h2>
-                <h3>Jusqu'aux confins du Système Solaire</h3>
+              <h2>Des croisières d'exception</h2>
+              <h3>Jusqu'aux confins du Système Solaire</h3>
                 <Carousel
                   activeIndex={activeIndex}
                   next={this.next}
@@ -136,14 +128,54 @@ class Space extends Component {
           </Container>
         </section>
 
-        <section id="espace-details"></section>
+        <section id="espace-details">
+        <Container>
+              <Row className="dark-theme">
+                <Col>
+                  <h2>Croisière « <span>Orbital</span> »</h2>
+                  <h3>Terre & Lune</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
+                  </p>                </Col>
+                <Col className="text-center m-auto">
+                  <h5 class="duree">3 jours</h5>
+                  <h5 class="prix">$75,000.00</h5>                
+                </Col>
+              </Row>
+              <Row className="dark-theme">
+                <Col>
+                  <h2>Croisière « <span>Sunlight</span> »</h2>
+                  <h3>Terre, Lune, Vénus & Mercure</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
+                  </p>
+                </Col>
+                <Col className="text-center m-auto">
+                  <h5 class="duree">10 jours</h5>
+                  <h5 class="prix">$180,000.00</h5>
+                </Col>
+              </Row>
+              <Row className="dark-theme">
+                <Col>
+                  <h2>Croisière « <span>Jovian</span> »</h2>
+                  <h3>Système Solaire</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
+                  </p>                </Col>
+                <Col className="text-center m-auto">
+                  <h5 class="duree">38 jours</h5>
+                  <h5 class="prix">$360,000.00</h5>
+                </Col>
+              </Row>
+          </Container>
+        </section>
 
         <section id="espace-reservation" class="blue-theme">
           <Container>
             <Row>
               <Col>
-                <h2>Réservations</h2>
-                <h3>Croisières stellaires</h3>
+              <h2>Réservations</h2>
+              <h3>Croisières stellaires</h3>
               </Col>
               <Col>
                 <Form>
@@ -164,16 +196,16 @@ class Space extends Component {
                       </FormGroup>
                     </Col>
                     <Col>
-                      <FormGroup>
-                        <Label for="nbpersonnes"><i class="material-icons">people</i> Nombre de personnes</Label>
-                        <Input type="number" name="nbpersonnes" id="espace-nbpersonnes" placeholder="0" />
-                      </FormGroup>
+                    <FormGroup>
+                      <Label for="nbpersonnes"><i class="material-icons">people</i> Nombre de personnes</Label>
+                      <Input type="number" name="nbpersonnes" id="espace-nbpersonnes" placeholder="0" />
+                    </FormGroup>
                     </Col>
                   </Row>
-
+                
                   <Row className="text-center">
                     <Col>
-                      <Button onClick={this.validateForm} className="reservation">Réserver <i class="material-icons">check</i></Button>
+                      <Button className="reservation">Réserver <i class="material-icons">check</i></Button>
                     </Col>
                   </Row>
                 </Form>
@@ -187,4 +219,4 @@ class Space extends Component {
   }
 }
 
-export default withRouter(Space);
+export default Space;

@@ -274,3 +274,26 @@ nav.navbar {
 .reservation:hover {
   box-shadow: 0 0 11px $ufo-green;
 }
+
+
+
+#espace-details h2 span {
+  font-family: 'Knewave';
+}
+
+#espace-details .row {
+  margin: 0px 0px 60px 0px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.prix {
+  font-weight: bold;
+  font-size: 2em;
+  color: $ufo-green;
+}
+
+.duree {
+  font-weight: bold;
+  font-size: 1.7em;
+}
