@@ -26,7 +26,7 @@ const items = [
     altText: 'Système Solaire',
     caption: 'Système Solaire'
   }
-  
+
 ];
 
 class Space extends Component {
@@ -39,6 +39,8 @@ class Space extends Component {
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
+
+    this.validateForm = this.validateForm.bind(this);
   }
 
   onExiting() {
@@ -64,6 +66,11 @@ class Space extends Component {
   goToIndex(newIndex) {
     if (this.animating) return;
     this.setState({ activeIndex: newIndex });
+  }
+
+  validateForm() {
+    // erreurs possibles, affichées par des consoles.log() suivis de return; changer par un affichage IHM par la suite
+    if (localStorage.getItem('token') == null) console.log('Utilisateur non connecté.');
   }
 
   render() {
@@ -108,8 +115,8 @@ class Space extends Component {
           <Container>
             <Row>
               <Col>
-              <h2>Des croisières d'exception</h2>
-              <h3>Jusqu'aux confins du Système Solaire</h3>
+                <h2>Des croisières d'exception</h2>
+                <h3>Jusqu'aux confins du Système Solaire</h3>
                 <Carousel
                   activeIndex={activeIndex}
                   next={this.next}
@@ -131,8 +138,8 @@ class Space extends Component {
           <Container>
             <Row>
               <Col>
-              <h2>Réservations</h2>
-              <h3>Croisières stellaires</h3>
+                <h2>Réservations</h2>
+                <h3>Croisières stellaires</h3>
               </Col>
               <Col>
                 <Form>
@@ -153,16 +160,16 @@ class Space extends Component {
                       </FormGroup>
                     </Col>
                     <Col>
-                    <FormGroup>
-                      <Label for="nbpersonnes"><i class="material-icons">people</i> Nombre de personnes</Label>
-                      <Input type="number" name="nbpersonnes" id="espace-nbpersonnes" placeholder="0" />
-                    </FormGroup>
+                      <FormGroup>
+                        <Label for="nbpersonnes"><i class="material-icons">people</i> Nombre de personnes</Label>
+                        <Input type="number" name="nbpersonnes" id="espace-nbpersonnes" placeholder="0" />
+                      </FormGroup>
                     </Col>
                   </Row>
-                
+
                   <Row className="text-center">
                     <Col>
-                      <Button className="reservation">Réserver <i class="material-icons">check</i></Button>
+                      <Button onClick={this.validateForm} className="reservation">Réserver <i class="material-icons">check</i></Button>
                     </Col>
                   </Row>
                 </Form>

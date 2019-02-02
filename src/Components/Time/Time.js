@@ -26,7 +26,7 @@ const items = [
     altText: 'Grèce Antique',
     caption: 'Grèce Antique'
   }
-  
+
 ];
 
 
@@ -40,6 +40,8 @@ class Time extends Component {
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
+
+    this.validateForm = this.validateForm.bind(this);
   }
 
   onExiting() {
@@ -67,6 +69,11 @@ class Time extends Component {
     this.setState({ activeIndex: newIndex });
   }
 
+  validateForm() {
+    // erreurs possibles, affichées par des consoles.log() suivis de return; changer par un affichage IHM par la suite
+    if (localStorage.getItem('token') == null) console.log('Utilisateur non connecté.');
+  }
+
   render() {
 
     const { activeIndex } = this.state;
@@ -84,7 +91,7 @@ class Time extends Component {
       );
     });
 
-    
+
     return (
       <div>
         <h1>Le Temps</h1>
@@ -110,8 +117,8 @@ class Time extends Component {
           <Container>
             <Row>
               <Col>
-              <h2>Choisissez votre époque</h2>
-              <h3>Lorem ipsum</h3>
+                <h2>Choisissez votre époque</h2>
+                <h3>Lorem ipsum</h3>
                 <Carousel
                   activeIndex={activeIndex}
                   next={this.next}
@@ -131,8 +138,8 @@ class Time extends Component {
           <Container>
             <Row>
               <Col>
-              <h2>Réservations</h2>
-              <h3>Évènements temporels</h3>
+                <h2>Réservations</h2>
+                <h3>Évènements temporels</h3>
               </Col>
               <Col>
                 <Form>
@@ -143,7 +150,6 @@ class Time extends Component {
                         <Input type="select" name="evenement" id="temps-evenement" placeholder="Evénement">
                           <option>Mariage</option>
                           <option>Aniversaire</option>
-                          <option>Croisière « Jovian »</option>
                         </Input>
                       </FormGroup>
                     </Col>
@@ -166,16 +172,16 @@ class Time extends Component {
                       </FormGroup>
                     </Col>
                     <Col>
-                    <FormGroup>
-                      <Label for="nbpersonnes"><i class="material-icons">people</i> Nombre de personne(s)</Label>
-                      <Input type="number" name="nbpersonnes" id="temps-nbpersonnes" placeholder="0" />
-                    </FormGroup>
+                      <FormGroup>
+                        <Label for="nbpersonnes"><i class="material-icons">people</i> Nombre de personne(s)</Label>
+                        <Input type="number" name="nbpersonnes" id="temps-nbpersonnes" placeholder="0" />
+                      </FormGroup>
                     </Col>
                   </Row>
-                
+
                   <Row className="text-center">
                     <Col>
-                      <Button className="reservation">Réserver <i class="material-icons">check</i></Button>
+                      <Button onClick={this.validateForm} className="reservation">Réserver <i class="material-icons">check</i></Button>
                     </Col>
                   </Row>
                 </Form>
