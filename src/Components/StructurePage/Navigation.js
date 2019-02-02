@@ -36,7 +36,7 @@ class Navigation extends Component {
     render() {
         return (
             <div>
-                <Navbar className="dark-theme" color='light' light expand="md">
+                <Navbar className="dark-theme" color='dark' dark expand="md">
                     <NavbarBrand tag={Link} to="/">
                         <img id="navbar-logo" src={require('../../media/image/logo.png')}></img>
                         {this.state.title}
