@@ -165,9 +165,9 @@ class Register extends Component {
                 <section id="inscription" class="dark-theme">
                     <Container>
                         <Row>
-                            <Col>
+                            <Col sm="12" md="6">
                             </Col>
-                            <Col>
+                            <Col sm="12" md="6">
                                 <Form>
                                     <Row>
                                         <Col>

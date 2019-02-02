@@ -95,10 +95,10 @@ class Connect extends Component {
         <section id="connexion" class="dark-theme">
           <Container>
             <Row>
-              <Col>
+              <Col sm="12" md="6">
 
               </Col>
-              <Col>
+              <Col sm="12" md="6">
                 <Form onSubmit={this.handleSubmit}>
                   <FormGroup>
                     <Label for="identifiant"><i class="material-icons">person</i> Adresse mail</Label>
