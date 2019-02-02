@@ -84,7 +84,7 @@ class Home extends Component {
                 <h2>La WSC Team</h2>
                 <h3>Une dévotion sans limite</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
+                  La WSC Team est composée des plus fervants Témoins de JavaScript. Elle est à ce jour constituée des ingénieurs <b>Y. Buatois</b>, <b>K. Kibongui</b>, <b>A. Pagel</b> et <b>J. Pinto Da Fonseca</b>.
                 </p>
               </Col>
             </Row>
