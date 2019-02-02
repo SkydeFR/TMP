@@ -7,7 +7,11 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink
+    NavLink,
+    UncontrolledDropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle
 } from 'reactstrap';
 
 class Navigation extends Component {
@@ -35,10 +39,21 @@ class Navigation extends Component {
                     <NavbarBrand tag={Link} to="/">{this.state.title}</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavbarElem link='/' title='Accueil' />
+                        <Nav className="ml-auto" navbar>        
+                            <UncontrolledDropdown nav inNavbar>
+                                <DropdownToggle nav caret>
+                                Destinations
+                                </DropdownToggle>
+                                <DropdownMenu right>
+                                    <DropdownItem>
+                                        <NavbarElem link='/temps' title='Le Temps' />
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <NavbarElem link='/espace' title={'L\'Espace'} />
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
                             <NavbarElem link='/reserver' title='Réserver' />
-                            <NavbarElem link='/destinations' title='Nos destinations' />
                             <NavbarElem link='/connexion' title='Connexion' />
                             <NavbarElem link='/inscription' title="Inscription" />
                         </Nav>
