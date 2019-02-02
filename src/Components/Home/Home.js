@@ -63,7 +63,7 @@ class Home extends Component {
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-3.png')}></img>
                 <h4 className="temoignage-nom">Leslie Delphoi</h4>
-                <h5 className="temoignage-destination">Aniversaire, Grèce Antique</h5>
+                <h5 className="temoignage-destination">Anniversaire, Grèce Antique</h5>
                 <hr />
                 <p>
                   Des expériences inoubliables tant sur la découverte d’un pays et d’une culture que sur le plan humain, un voyage extraordinaire ! Paysages, faune, flore et rencontres exceptionnelles. Voyage très riche à tous points de vue.
@@ -84,7 +84,7 @@ class Home extends Component {
                 <h2 className="font-knewave">La WSC'Team</h2>
                 <h3>Une dévotion sans limite</h3>
                 <p>
-                  La WSC Team est composée des plus fervants Témoins de JavaScript. Elle est à ce jour constituée des ingénieurs <b>Y. Buatois</b>, <b>K. Kibongui</b>, <b>A. Pagel</b> et <b>J. Pinto Da Fonseca</b>.
+                  La <span className="font-knewave">WSC'Team</span> est composée des plus fervants Témoins de JavaScript. Elle est à ce jour constituée des ingénieurs <b>Y. Buatois</b>, <b>K. Kibongui</b>, <b>A. Pagel</b> et <b>J. Pinto Da Fonseca</b>.
                 </p>
               </Col>
             </Row>

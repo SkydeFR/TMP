@@ -44,6 +44,8 @@ export default {
 
   isAuth,
 
+  saveToken: token => localStorage.setItem('token', token),
+
   userInfos: (() => api.get('/users/get', {
     params: {
       token: getToken()
