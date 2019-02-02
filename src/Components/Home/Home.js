@@ -41,7 +41,7 @@ class Home extends Component {
             <Row>
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-1.png')}></img>
-                <h4 className="temoignage-nom">Alexandre Guidet</h4>
+                <h4 className="temoignage-nom">Auriane Diot</h4>
                 <h5 className="temoignage-destination">Mariage, Japon Impérial</h5>
                 <hr />
 
@@ -62,7 +62,7 @@ class Home extends Component {
 
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-3.png')}></img>
-                <h4 className="temoignage-nom">Christophe Nicolle</h4>
+                <h4 className="temoignage-nom">Leslie Delphoi</h4>
                 <h5 className="temoignage-destination">Aniversaire, Grèce Antique</h5>
                 <hr />
                 <p>
