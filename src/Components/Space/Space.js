@@ -125,6 +125,8 @@ class Space extends Component {
           </Container>
         </section>
 
+        <section id="espace-details"></section>
+
         <section id="espace-reservation" class="blue-theme">
           <Container>
             <Row>
