@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink as BootstrapLink } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import { Link as ReactLink } from 'react-router-dom';
 
 class Footer extends Component {
@@ -17,51 +18,56 @@ class Footer extends Component {
 
             <footer class="page-footer font-small indigo">
 
-                <div class="container text-center text-md-left">
-                    <div class="row">
-
-
-                        <div class="col-md-3 mx-auto">
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Editeur</h5>
+                <Container>
+                    <Row>
+                        <Col>
+                            <h5 class="font-knewave">WSC Event</h5>
+                            <hr/>
                             <ul class="list-unstyled">
-                                <li><a href="/~temoins/#equipe">Les Témoins de JavaScript</a></li>
-                                <li>- Yan BUATOIS</li>
-                                <li>- Ange PAGEL</li>
-                                <li>- Kévin KIBONGUI</li>
-                                <li>- Julien PINTO DA FONSECA</li>
+                                <li><ReactLink tag={BootstrapLink} to="/connexion">Espace Personnel</ReactLink></li>
+                                <li><ReactLink tag={BootstrapLink} to="/destinations">Le Temps</ReactLink></li>
+                                <li><ReactLink tag={BootstrapLink} to="/connexion">L'Espace</ReactLink></li>
+                                <li><ReactLink tag={BootstrapLink} to="/reserver">Réservations</ReactLink></li>
                             </ul>
-                        </div>
-
-                        <hr class="clearfix w-100 d-md-none" />
-
-                        <div class="col-md-3 mx-auto">
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">WSC'Event</h5>
+                        </Col>
+                        <Col>
+                            <h5 class="font-knewave">WSC Team</h5>
+                            <hr/>
                             <ul class="list-unstyled">
-                                <li><ReactLink tag={BootstrapLink} to="/">Accueil</ReactLink></li>
-                                <li><ReactLink tag={BootstrapLink} to="/reserver">Réserver</ReactLink></li>
-                                <li><ReactLink tag={BootstrapLink} to="/destinations">Nos destinations</ReactLink></li>
-                                <li><ReactLink tag={BootstrapLink} to="/connexion">Connexion</ReactLink></li>
-                                <li><ReactLink tag={BootstrapLink} to="/inscription">Inscription</ReactLink></li>
+                                <li>Yan Buatois</li>
+                                <li>Kévin Kibongui</li>
+                                <li>Ange Pagel</li>
+                                <li>Julien Pinto Da Fonseca</li>
                             </ul>
-                        </div>
-
-                        <hr class="clearfix w-100 d-md-none" />
-
-                        <div class="col-md-3 mx-auto">
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Hébergeur</h5>
+                        </Col>
+                        <Col>
+                            <h5>Réseaux</h5>
+                            <hr/>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Instagram</a></li>
+                                <li><a href="#">Pinterest</a></li>
+                                <li><a href="#">LinkedIn</a></li>
+                            </ul>
+                        </Col>
+                        <Col>
+                            <h5>Hébergeur</h5>
+                            <hr/>
                             <ul class="list-unstyled">
                                 <li><a href="http://esirem.u-bourgogne.fr/">ESIREM</a></li>
                                 <li>9 Avenue Alain Savary,</li>
                                 <li>21000 Dijon</li>
                                 <li><a href="tel:33380396009">+33 3 80 39 60 09</a></li>
                             </ul>
-                        </div>
+                        </Col>
 
-                    </div>
+                    </Row>
+                </Container>
 
+                <div id="copyright" className="dark-theme">
+                    <span>©2019 <span class="font-knewave">WSC Event</span>. Tous droits réservés.</span>
                 </div>
 
-                <div class="footer-copyright text-center py-3">© 2019 Les Témoins de Javascript</div>
 
             </footer>
         )

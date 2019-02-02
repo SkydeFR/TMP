@@ -3,7 +3,11 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Knewave");
 
+.font-knewave {
+  font-family: "Knewave";
+}
 
 /* Palette de couleurs */
 
@@ -64,6 +68,43 @@ body {
   color: $prestige-blue;
   font-family: 'Open Sans';
 
+}
+
+footer {
+  //background-color: $white;
+  margin-top: 70px;
+  //background: $prestige-blue;
+  //background: linear-gradient(140deg, $prestige-blue 0%, $black 100%);
+  //color: $white;
+}
+
+footer h5 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 0 !important;
+  font-variant: small-caps;
+}
+
+footer hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#copyright {
+  color: $bay-wharf;
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+a {
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: none !important;
+  transition: 0.3s;
 }
 
 p {
