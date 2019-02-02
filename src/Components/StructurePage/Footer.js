@@ -19,7 +19,7 @@ class Footer extends Component {
 
                 <Container>
                     <Row>
-                        <Col>
+                        <Col xs="12" sm="6" lg="3">
                             <h5 className="font-knewave">WSC'Event</h5>
                             <hr />
                             <ul className="list-unstyled">
@@ -29,7 +29,7 @@ class Footer extends Component {
                                 <li><ReactLink to="/reserver">Réservations</ReactLink></li>
                             </ul>
                         </Col>
-                        <Col>
+                        <Col xs="12" sm="6" lg="3">
                             <h5 className="font-knewave">WSC'Team</h5>
                             <hr />
                             <ul className="list-unstyled">
@@ -39,7 +39,7 @@ class Footer extends Component {
                                 <li>Julien Pinto Da Fonseca</li>
                             </ul>
                         </Col>
-                        <Col>
+                        <Col xs="12" sm="6" lg="3">
                             <h5>Réseaux</h5>
                             <hr />
                             <ul className="list-unstyled">
@@ -49,7 +49,7 @@ class Footer extends Component {
                                 <li><a href="javascript:void(0);">LinkedIn</a></li>
                             </ul>
                         </Col>
-                        <Col>
+                        <Col xs="12" sm="6" lg="3">
                             <h5>Hébergeur</h5>
                             <hr />
                             <ul className="list-unstyled">
