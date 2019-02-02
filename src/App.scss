@@ -62,6 +62,23 @@ $black: #000000;
 }
 
 
+#equipe img {
+  max-height: 100%;  
+  max-width: 100%; 
+  width: auto;
+  height: auto;
+  position: absolute;  
+  top: 0;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  margin: auto;
+  padding: 0px 30px 0px 30px;
+  border-bottom: 2px solid $black;
+}
+
+
+
 body {
   background-image: radial-gradient(circle, $city-lights, $city-lights 1px, $white 1px, $white);
   background-size: 20px 20px;
@@ -125,7 +142,6 @@ h1 {
   font-size: 8em !important;
   text-align: center;
   padding-top: 60px !important;
-  
 }
 
 h2 {
@@ -215,9 +231,6 @@ nav.navbar {
 }
 
 
-
-
-
 .material-icons {
   vertical-align: bottom;
 }
@@ -229,7 +242,6 @@ nav.navbar {
   border: none !important;
   margin-top: 10px;
   margin-bottom: 10px;
-  transition: 0.5s !important;
   transition: 0.3s !important;
 }
 
@@ -247,8 +259,15 @@ nav.navbar {
   padding: 20px 30px 10px 30px !important;
 }
 
-.temoignage h4, .temoignage h5 {
+.temoignage {
   text-align: center;
+}
+
+.temoignage img {
+  max-height: 150px;
+  border-radius: 400px;
+  border: none;
+  margin-bottom: 20px;
 }
 
 
