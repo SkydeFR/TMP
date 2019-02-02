@@ -20,7 +20,7 @@ class Footer extends Component {
                 <Container>
                     <Row>
                         <Col>
-                            <h5 className="font-knewave">WSC Event</h5>
+                            <h5 className="font-knewave">WSC'Event</h5>
                             <hr />
                             <ul className="list-unstyled">
                                 <li><ReactLink to="/connexion">Espace Personnel</ReactLink></li>
@@ -64,7 +64,7 @@ class Footer extends Component {
                 </Container>
 
                 <div id="copyright" className="dark-theme">
-                    <span>©2019 <span className="font-knewave">WSC Event</span>. Tous droits réservés.</span>
+                    <span>©2019 <span className="font-knewave">WSC'Event</span>. Tous droits réservés.</span>
                 </div>
 
 
