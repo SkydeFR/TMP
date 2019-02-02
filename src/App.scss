@@ -40,6 +40,24 @@ $twinkle-blue: #ced6e0;
 $black: #000000;
 
 
+
+.dark-theme {
+  background: $prestige-blue;
+  background: linear-gradient(140deg, $prestige-blue 0%, $black 100%);
+  color: $white;
+}
+
+.blue-theme {
+  background: $bright-greek;
+  background: linear-gradient(140deg, $saturated-sky 0%, $bright-greek 100%);
+  color: $white;
+}
+
+.dark-theme h3, .blue-theme h3 {
+  color: $twinkle-blue !important;
+}
+
+
 body {
   background-image: radial-gradient(circle, $city-lights, $city-lights 1px, $white 1px, $white);
   background-size: 20px 20px;
@@ -99,31 +117,15 @@ nav.navbar {
   box-shadow: 0 0 11px $saturated-sky;
 }
 
-#faucon-imperial {
-  background: $prestige-blue;
-  background: linear-gradient(140deg, $prestige-blue 0%, $black 100%);
-  color: $white;
-}
+
 
 #temoignages {
   color: $prestige-blue;
 }
 
-#equipe {
-  background: $bright-greek;
-  background: linear-gradient(140deg, $saturated-sky 0%, $bright-greek 100%);
-  color: $white;
-}
 
-#faucon-imperial h3, #equipe h3 {
-  color: $twinkle-blue !important;
-}
 
-#connexion, #inscription {
-  background: $prestige-blue;
-  background: linear-gradient(140deg, $prestige-blue 0%, $black 100%);
-  color: $white;
-}
+
 
 .material-icons {
   vertical-align: bottom;
