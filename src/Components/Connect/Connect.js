@@ -95,8 +95,8 @@ class Connect extends Component {
         <section id="connexion" class="dark-theme">
           <Container>
             <Row>
-              <Col sm="12" md="6">
-
+              <Col sm="12" md="6" className="text-center m-auto">
+                  <i className="material-icons bigicon">whatshot</i>
               </Col>
               <Col sm="12" md="6">
                 <Form onSubmit={this.handleSubmit}>
@@ -115,7 +115,11 @@ class Connect extends Component {
                   <Alert color={this.state.alertColor} isOpen={this.state.alertOpen} toggle={this.toggleAlert}>{this.state.alertMessage}</Alert>
 
                 </Form>
-                <p>Vous n'avez pas de compte ? <Link to={'/inscription'}>Créez-en un !</Link></p>
+                <p>
+                  Vous n'avez pas de compte ? <Link to={'/inscription'}>Créez-en un !</Link>
+                  <br/>
+                  <a href="#">Compte perdu.</a>
+                </p>
               </Col>
             </Row>
           </Container>

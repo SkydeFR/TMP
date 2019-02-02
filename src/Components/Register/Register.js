@@ -165,7 +165,9 @@ class Register extends Component {
                 <section id="inscription" class="dark-theme">
                     <Container>
                         <Row>
-                            <Col sm="12" md="6">
+                            <Col sm="12" md="6" className="text-center m-auto">
+                                <i className="material-icons bigicon">sms</i>
+                                <p className="w-75 m-auto">En vous inscrivant, vous confirmez avoir lu, compris et accepté les <a href="#">Conditions d'utilisation</a> et la <a href="#">Politique de confidentialité</a> ainsi qu'être informé(e) de votre droit à l'information.</p>
                             </Col>
                             <Col sm="12" md="6">
                                 <Form>
