@@ -77,10 +77,10 @@ class Home extends Component {
         <section id="equipe" className="blue-theme">
           <Container>
             <Row>
-              <Col>
+              <Col sm="12" md="6">
                 <img src={require('../../media/image/team.png')}></img>
               </Col>
-              <Col>
+              <Col sm="12" md="6">
                 <h2 className="font-knewave">La WSC'Team</h2>
                 <h3>Une dévotion sans limite</h3>
                 <p>
