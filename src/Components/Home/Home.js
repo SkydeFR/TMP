@@ -6,9 +6,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1 class="font-knewave">WSC Event</h1>
-        <h2 class="sous-titre">Votre voyage commence maintenant</h2>
-        <section id="voyages" class="dark-theme">
+        <h1 className="font-knewave">WSC Event</h1>
+        <h2 className="sous-titre">Votre voyage commence maintenant</h2>
+        <section id="voyages" className="dark-theme">
           <Container>
             <Row>
               <Col>
@@ -41,8 +41,8 @@ class Home extends Component {
             <Row>
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-1.png')}></img>
-                <h4 class="temoignage-nom">Alexandre Guidet</h4>
-                <h5 class="temoignage-destination">Mariage, Japon Impérial</h5>
+                <h4 className="temoignage-nom">Alexandre Guidet</h4>
+                <h5 className="temoignage-destination">Mariage, Japon Impérial</h5>
                 <hr />
 
                 <p>
@@ -52,8 +52,8 @@ class Home extends Component {
 
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-2.png')}></img>
-                <h4 class="temoignage-nom">Matthieu Simonet</h4>
-                <h5 class="temoignage-destination">Croisière « Jovian »</h5>
+                <h4 className="temoignage-nom">Matthieu Simonet</h4>
+                <h5 className="temoignage-destination">Croisière « Jovian »</h5>
                 <hr />
                 <p>
                   De formidables liens se sont tissés avec les locaux notamment dans les petits villages entourant l'arène de Nephtis, notre fabuleux guide Hien était formidable ! Une expérience hors du commun qui marque et crée de beaux souvenirs.
@@ -62,8 +62,8 @@ class Home extends Component {
 
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-3.png')}></img>
-                <h4 class="temoignage-nom">Christophe Nicolle</h4>
-                <h5 class="temoignage-destination">Aniversaire, Grèce Antique</h5>
+                <h4 className="temoignage-nom">Christophe Nicolle</h4>
+                <h5 className="temoignage-destination">Aniversaire, Grèce Antique</h5>
                 <hr />
                 <p>
                   Des expériences inoubliables tant sur la découverte d’un pays et d’une culture que sur le plan humain, un voyage extraordinaire ! Paysages, faune, flore et rencontres exceptionnelles. Voyage très riche à tous points de vue.
@@ -74,7 +74,7 @@ class Home extends Component {
           </Container>
         </section>
 
-        <section id="equipe" class="blue-theme">
+        <section id="equipe" className="blue-theme">
           <Container>
             <Row>
               <Col>
