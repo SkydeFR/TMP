@@ -84,7 +84,7 @@ class Home extends Component {
                 <h2 className="font-knewave">La WSC'Team</h2>
                 <h3>Une dévotion sans limite</h3>
                 <p>
-                  La WSC Team est composée des plus fervants Témoins de JavaScript. Elle est à ce jour constituée des ingénieurs <b>Y. Buatois</b>, <b>K. Kibongui</b>, <b>A. Pagel</b> et <b>J. Pinto Da Fonseca</b>.
+                  La <span className="font-knewave">WSC'Team</span> est composée des plus fervants Témoins de JavaScript. Elle est à ce jour constituée des ingénieurs <b>Y. Buatois</b>, <b>K. Kibongui</b>, <b>A. Pagel</b> et <b>J. Pinto Da Fonseca</b>.
                 </p>
               </Col>
             </Row>
