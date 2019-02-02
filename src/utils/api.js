@@ -11,7 +11,7 @@ const cache = setupCache({
 });
 
 const api = axios.create({
-  baseURL: 'http://localhost:8081',
+  baseURL: 'http://lebot.me:8081',
   timeout: 2500,
   headers,
   adapter: cache.adapter,
@@ -57,8 +57,8 @@ export default {
       this.userInfos().then(({ data: { user } }) => {
         resolve(user.admin)
       }).catch(err => reject(err));
-      
-    
+
+
 
     });
   }),
