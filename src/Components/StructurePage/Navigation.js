@@ -38,7 +38,7 @@ class Navigation extends Component {
             <div>
                 <Navbar className="dark-theme" color='dark' dark expand="md">
                     <NavbarBrand tag={Link} to="/">
-                        <img id="navbar-logo" src={require('../../media/image/logo.png')}></img>
+                        <img id="navbar-logo" src={require('../../media/image/logo.png')} alt="logo"></img>
                         {this.state.title}
                     </NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
@@ -47,7 +47,7 @@ class Navigation extends Component {
                             <NavbarElem link='/' title='Accueil' />
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
-                                Destinations
+                                    Destinations
                                 </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
