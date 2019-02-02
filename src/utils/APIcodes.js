@@ -16,7 +16,6 @@ const codes = {
   end_before_start: "La date de fin se situe avant la date de début.",
   existing_place: "Une destination portant ce nom existe déjà.",
   invalid_type_ids: "L'identifiant d'un des types que vous avez choisi est incorrect.",
-  
 };
 
 export default new Proxy(codes, {

@@ -1,8 +1,9 @@
 import axios from 'axios';
-import config from '../config';
+//import config from '../config';
 import {setupCache} from 'axios-cache-adapter';
 
 const headers = {
+  'Access-Control-Allow-Origin': '*',
   'Content-Type': 'application/json',
 };
 
@@ -11,7 +12,7 @@ const cache = setupCache({
 });
 
 const api = axios.create({
-  baseURL: config.api,
+  baseURL: 'http://localhost:8081',
   timeout: 2500,
   headers,
   adapter: cache.adapter,
@@ -52,9 +53,14 @@ export default {
 
   isAdmin:(function() {
     return new Promise((resolve,reject) => {
-      this.userInfos().then(({data: {user}}) => {
+
+      this.userInfos().then(
+        ({data: {user}}) => {
         resolve(user.admin)
       }).catch(err => reject(err));
+      
+    
+
     });
   }),
 
@@ -79,7 +85,7 @@ export default {
    * @param {Object} informations Informations de l'utilisateur.
    * @param {String} informations.lieu Lieu de la destination.
    */
-  createDestination: (token, informations) => api.post('/admin/destination/add', {token, ...informations}, {headers});
+  createDestination: (token, informations) => api.post('/admin/destination/add', {token, ...informations}, {headers}),
 
   // countUsers:(function(users) {
   //   return new Promise((resolve, reject) => {

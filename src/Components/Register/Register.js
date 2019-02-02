@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reac
 import './Register.css';
 import * as EmailValidator from 'email-validator';
 import { Link } from 'react-router-dom';
-
+import api from '../../utils/api.js';
 
 
 class Register extends Component {
@@ -18,6 +18,7 @@ class Register extends Component {
             inscription_mail: '',
             inscription_genre: 'Masculin',
             inscription_date_naissance: '',
+            inscription_numero_telephone: '',
             inscription_mot_de_passe: '',
             inscription_confirmation: ''
         };
@@ -30,15 +31,61 @@ class Register extends Component {
     validateForm() {
 
         // erreurs possibles, affichées par des consoles.log() suivis de return; changer par un affichage IHM par la suite
-        if (this.state.inscription_prenom === '') console.log('Prénom vide.');
-        if (this.state.inscription_nom === '') console.log('Nom vide.');
-        if (this.state.inscription_mail === '') console.log('Mail vide.');
-        if (this.state.inscription_date_naissance === '') console.log('Date de naissance invalide.');
-        if (!EmailValidator.validate(this.state.inscription_mail)) console.log('Mail invalide.');
-        if (this.state.inscription_mot_de_passe === '') console.log('Mot de passe vide.');
-        if (this.state.inscription_confirmation === '') console.log('Confirmation du mot de passe vide.');
-        if (this.state.inscription_mot_de_passe !== this.state.inscription_confirmation) console.log('Les deux mots de passe ne sont pas identiques.');
+        if (this.state.inscription_prenom === '') {
+            console.log('Prénom vide.');
+            return;
+        }
+        if (this.state.inscription_nom === '') {
+            console.log('Nom vide.');
+            return;
+        } 
+        if (this.state.inscription_mail === '') {
+            console.log('Mail vide.');
+            return;
+        }
+        if (!EmailValidator.validate(this.state.inscription_mail)) {
+            console.log('Mail invalide.');
+            return;
+        }
+        if (this.state.inscription_date_naissance === '') {
+            console.log('Date de naissance invalide.');
+            return;
+        }
+        if (this.state.inscription_numero_telephone === '') {
+            console.log('Numéro de téléphone invalide.');
+            return;
+        }
+        if (this.state.inscription_mot_de_passe === '') {
+            console.log('Mot de passe vide.');
+            return;
+        }
+        if (this.state.inscription_confirmation === '') {
+            console.log('Confirmation du mot de passe vide.');
+            return;
+        }
+        if (this.state.inscription_mot_de_passe !== this.state.inscription_confirmation) {
+            console.log('Les deux mots de passe ne sont pas identiques.');
+            return;
+        }
 
+        // Everything is valid, make the API request
+
+        let user = {
+            prenom: this.state.inscription_prenom,
+            nom: this.state.inscription_nom,
+            email: this.state.inscription_mail,
+            password: this.state.inscription_mot_de_passe,
+            phone: this.state.inscription_numero_telephone
+        }
+
+        api.signup(user).then(
+            console.log('xD !!!!!!!!')
+        ).catch(
+            err => {
+                console.log(err.response.data);
+                console.error(err)
+            }
+        );
 
     }
 
@@ -46,8 +93,6 @@ class Register extends Component {
         this.setState({
             [event.target.id]: event.target.value
         });
-
-        console.log(event.target.id);
 
         /*
         if(this.state[event.target.id + "Valide"] === 2) {
@@ -115,6 +160,14 @@ class Register extends Component {
                                             <FormGroup>
                                                 <Label for="date-naissance"><i class="material-icons">cake</i> Date de naissance</Label>
                                                 <Input type="date" name="date_naissance" id="inscription_date_naissance" onChange={this.handleChange}></Input>
+                                            </FormGroup>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <FormGroup>
+                                                <Label for="numero_telephone"><i class="material-icons">security</i> Numéro de téléphone</Label>
+                                                <Input type="text" name="numero_telephone" id="inscription_numero_telephone" onChange={this.handleChange}></Input>
                                             </FormGroup>
                                         </Col>
                                     </Row>
