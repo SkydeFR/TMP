@@ -60,7 +60,7 @@ class Home extends Component {
               </Col>
 
               <Col className="temoignage">
-                <h4 class="temoignage-nom">Cristophe Nicolle</h4>
+                <h4 class="temoignage-nom">Christophe Nicolle</h4>
                 <h5 class="temoignage-destination">Anniversaire, Neptune</h5>
                 <hr />
                 <p>
