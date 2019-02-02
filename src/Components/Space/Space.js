@@ -102,7 +102,7 @@ class Space extends Component {
         <section id="espace-presentation" class="dark-theme">
           <Container>
             <Row>
-              <Col>
+              <Col sm="12" md="6">
                 <h2>Le Mega Stardust 5210</h2>
                 <h3>Le Système Solaire à vol d'oiseau</h3>
                 <p>
@@ -111,7 +111,7 @@ class Space extends Component {
                   Grâce à ce vaisseau il est possible d'effectuer des voyages spatiaux tout confort à l'intérieur de notre système solaire sous la forme d'une croisière.
                 </p>
               </Col>
-              <Col>
+              <Col sm="12" md="6">
 
               </Col>
             </Row>
@@ -142,38 +142,38 @@ class Space extends Component {
         <section id="espace-details">
           <Container>
             <Row className="dark-theme">
-              <Col>
-                <h2>Croisière « <span>Orbital</span> »</h2>
+              <Col sm="12" md="6">
+                <h2>Croisière «<span>Orbital</span>»</h2>
                 <h3>Terre & Lune</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
                   </p>                </Col>
-              <Col className="text-center m-auto">
+              <Col sm="12" md="6" className="text-center m-auto">
                 <h5 class="duree">3 jours</h5>
                 <h5 class="prix">$75,000.00</h5>
               </Col>
             </Row>
             <Row className="dark-theme">
-              <Col>
-                <h2>Croisière « <span>Sunlight</span> »</h2>
+              <Col sm="12" md="6">
+                <h2>Croisière «<span>Sunlight</span>»</h2>
                 <h3>Terre, Lune, Vénus & Mercure</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
                   </p>
               </Col>
-              <Col className="text-center m-auto">
+              <Col sm="12" md="6" className="text-center m-auto">
                 <h5 class="duree">10 jours</h5>
                 <h5 class="prix">$180,000.00</h5>
               </Col>
             </Row>
             <Row className="dark-theme">
-              <Col>
-                <h2>Croisière « <span>Jovian</span> »</h2>
+              <Col sm="12" md="6">
+                <h2>Croisière «<span>Jovian</span>»</h2>
                 <h3>Système Solaire</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
                   </p>                </Col>
-              <Col className="text-center m-auto">
+              <Col sm="12" md="6" className="text-center m-auto">
                 <h5 class="duree">38 jours</h5>
                 <h5 class="prix">$360,000.00</h5>
               </Col>
@@ -184,11 +184,11 @@ class Space extends Component {
         <section id="espace-reservation" class="blue-theme">
           <Container>
             <Row>
-              <Col>
+              <Col sm="12" md="6">
                 <h2>Réservations</h2>
                 <h3>Croisières stellaires</h3>
               </Col>
-              <Col>
+              <Col sm="12" md="6">
                 <Form>
                   <FormGroup>
                     <Label for="evenement"><i class="material-icons">map</i> Croisière</Label>
