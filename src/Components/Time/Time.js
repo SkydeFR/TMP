@@ -143,6 +143,49 @@ class Time extends Component {
           </Container>
         </section>
 
+        <section id="temps-details">
+        <Container>
+              <Row className="dark-theme">
+                <Col>
+                  <h2>Japon Impérial</h2>
+                  <h3>XIX<sup>e</sup> Siècle</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
+                  </p>                </Col>
+                <Col className="text-center m-auto">
+                  <h5 class="duree">3 jours</h5>
+                  <h5 class="prix">$750.00</h5>                
+                </Col>
+              </Row>
+              <Row className="dark-theme">
+                <Col>
+                  <h2>Egypte Ancienne</h2>
+                  <h3>-2000 av J.C.</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
+                  </p>
+                </Col>
+                <Col className="text-center m-auto">
+                  <h5 class="duree">10 jours</h5>
+                  <h5 class="prix">$8,000.00</h5>
+                </Col>
+              </Row>
+              <Row className="dark-theme">
+                <Col>
+                  <h2>Grèce Antique</h2>
+                  <h3>V<sup>e</sup> Siècle av J.C.</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, enim a vestibulum facilisis, orci ante laoreet augue, et pulvinar tortor orci at dui.
+                  </p>
+                </Col>
+                <Col className="text-center m-auto">
+                  <h5 class="duree">38 jours</h5>
+                  <h5 class="prix">$5,700.00</h5>
+                </Col>
+              </Row>
+          </Container>
+        </section>
+
         <section id="temps-reservation" class="blue-theme">
           <Container>
             <Row>
