@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import './Register.css';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import * as EmailValidator from 'email-validator';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
  
 
 
@@ -41,47 +40,84 @@ class Register extends Component {
         return (
 
             <div>
-
-                <h1>S'inscrire</h1>
-                <h2 class="sous-titre">Sous-titre</h2>
-
-                <div class="card">
-                    <br/>
-
-                    Nom
-                    <input type="text" id="nom" />
-
-                    Prénom
-                    <input type="text" id="prenom" />
-
-                    Adresse e-mail
-                    <input type="text" id="mail" />
-
-                    Genre
-                    <FormGroup>
-                        <Input type="select" name="TypeEvent" id="TypeEvent" placeholder="Evénement">
-                            <option>Masculin</option>
-                            <option>Feminin</option>
-                            <option>Autre</option>
-                        </Input>
-                    </FormGroup>
                 
-                    Mot de passe
-                    <input type="text" id="password" />
-                    Confirmer le mot de passe
-                    <input type="text" id="cpassword" />
-                    Date de naissance
-                    <input type="date" id="datenaissance" />
+            <h1>Inscription</h1>
+            <h2 class="sous-titre">Rejoignez l'aventure WSC</h2>
 
-                    <br/>
-                    <button onClick={this.validateForm}>Valider</button>
-                    <br/>
-                    
-                </div>
+            <section id="inscription">
+                <Container>
+                <Row>
+                    <Col>
+                    </Col>
+                    <Col>
+                    <Form>
+                        <Row>
+                            <Col>
+                                <FormGroup>
+                                    <Label for="prenom"><i class="material-icons">person</i> Prénom</Label>
+                                    <Input type="text" name="prenom" id="inscription-prenom"></Input>
+                                </FormGroup>
+                            </Col>
+                            <Col>
+                                <FormGroup>
+                                    <Label for="nom"><i class="material-icons">person_outline</i> Nom</Label>
+                                    <Input type="text" name="nom" id="inscription-nom"></Input>
+                                </FormGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <FormGroup>
+                                    <Label for="mail"><i class="material-icons">alternate_email</i> Adresse mail</Label>
+                                    <Input type="email" name="mail" id="inscription-mail"></Input>
+                                </FormGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <FormGroup>
+                                    <Label for="genre"><i class="material-icons">wc</i> Genre</Label>
+                                    <Input type="select" name="genre" id="inscription-genre">
+                                        <option>Masculin</option>
+                                        <option>Féminin</option>
+                                        <option>Autre</option>
+                                    </Input>
+                                </FormGroup>
+                            </Col>
+                            <Col>
+                                <FormGroup>
+                                    <Label for="date-naissance"><i class="material-icons">cake</i> Date de naissance</Label>
+                                    <Input type="date" name="date-naissance" id="inscription-date-naissance"></Input>
+                                </FormGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <FormGroup>
+                                    <Label for="mot-de-passe"><i class="material-icons">security</i> Mot de passe</Label>
+                                    <Input type="password" name="mot-de-passe" id="connexion-mot-de-passe"></Input>
+                                </FormGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <FormGroup>
+                                    <Label for="confirmation"><i class="material-icons">verified_user</i> Confirmation du mot de passe</Label>
+                                    <Input type="password" name="confirmation" id="inscription-confirmation"></Input>
+                                </FormGroup>
+                            </Col>
+                        </Row>
 
+                        <Button onClick={this.validateForm}>Inscription</Button>
+                    </Form>
+                    <p>Vous avez déjà un compte ? <a href="#">Connectez-vous !</a></p>
+                    </Col>
+                </Row>
+                </Container>
+            </section>
+            
             </div>
 
-            
         );
     }
 }
