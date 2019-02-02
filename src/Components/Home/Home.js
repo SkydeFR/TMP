@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1 className="font-knewave">WSC Event</h1>
+        <h1 className="font-knewave">WSC'Event</h1>
         <h2 className="sous-titre">Votre voyage commence maintenant</h2>
         <section id="voyages" className="dark-theme">
           <Container>
@@ -15,7 +15,7 @@ class Home extends Component {
                 <h2>Le temps et l'espace</h2>
                 <h3>Sont à votre portée</h3>
                 <p>
-                  À l'aide de nos deux dernières technologies de pointe, le Faucon Imperial et le Mega Stardust 5210, deux prestations exclusives sont désormais disponibles chez WSC Event ! Il est désormais possible de voyager en toute sécurité dans une infinité d'époques différentes à bord du Faucon Imperial ainsi que d'effectuer des voyages spatiaux tout confort à l'intérieur de notre système solaire sous la forme d'une croisière au sein du Mega Stardust 5210.
+                  À l'aide de nos deux dernières technologies de pointe, le Faucon Imperial et le Mega Stardust 5210, deux prestations exclusives sont désormais disponibles chez WSC'Event ! Il est désormais possible de voyager en toute sécurité dans une infinité d'époques différentes à bord du Faucon Imperial ainsi que d'effectuer des voyages spatiaux tout confort à l'intérieur de notre système solaire sous la forme d'une croisière au sein du Mega Stardust 5210.
                 </p>
               </Col>
             </Row>
@@ -52,7 +52,7 @@ class Home extends Component {
 
               <Col className="temoignage">
                 <img src={require('../../media/image/temoignage-2.png')}></img>
-                <h4 className="temoignage-nom">Matthieu Simonet</h4>
+                <h4 className="temoignage-nom">Bruce Stark</h4>
                 <h5 className="temoignage-destination">Croisière « Jovian »</h5>
                 <hr />
                 <p>

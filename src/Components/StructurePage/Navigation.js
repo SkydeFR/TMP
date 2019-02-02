@@ -22,7 +22,7 @@ class Navigation extends Component {
         this.toggle = this.toggle.bind(this);
         this.state = {
             isOpen: false,
-            title: "WSC Event"
+            title: "WSC'Event"
         }
 
     }
