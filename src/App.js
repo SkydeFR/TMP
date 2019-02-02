@@ -10,6 +10,8 @@ import Book from './Components/Book/Book.js';
 import Trips from './Components/Trips/Trips.js';
 import Navigation from './Components/StructurePage/Navigation.js';
 import Footer from './Components/StructurePage/Footer.js';
+import Time from './Components/Time/Time.js';
+import Space from './Components/Space/Space.js';
 import NotFound from './Components/NotFound/NotFound.js';
 
 
@@ -25,6 +27,8 @@ class App extends Component {
             <Route path="/destinations" component={Trips} />
             <Route path="/connexion" component={Connect} />
             <Route path="/inscription" component={Register} />
+            <Route path="/temps" component={Time} />
+            <Route path="/espace" component={Space} />
             <Route path="/" component={NotFound} />
           </Switch>
 
