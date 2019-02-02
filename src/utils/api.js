@@ -1,6 +1,6 @@
 import axios from 'axios';
-//import config from '../config';
-import {setupCache} from 'axios-cache-adapter';
+import config from '../config';
+import { setupCache } from 'axios-cache-adapter';
 
 const headers = {
   'Access-Control-Allow-Origin': '*',
@@ -29,7 +29,7 @@ function logout() {
 }
 
 function getToken() {
-  return  localStorage.getItem('token');
+  return localStorage.getItem('token');
 }
 
 
@@ -38,10 +38,10 @@ export default {
     email,
     password,
   }, {
-    headers
-  })),
+      headers
+    })),
 
-  signup: ((send) => api.post(`/users/signup`, send, {headers})),
+  signup: ((send) => api.post(`/users/signup`, send, { headers })),
 
   isAuth,
 
@@ -49,13 +49,11 @@ export default {
     params: {
       token: getToken()
     }
-  }, {headers})),
+  }, { headers })),
 
-  isAdmin:(function() {
-    return new Promise((resolve,reject) => {
-
-      this.userInfos().then(
-        ({data: {user}}) => {
+  isAdmin: (function () {
+    return new Promise((resolve, reject) => {
+      this.userInfos().then(({ data: { user } }) => {
         resolve(user.admin)
       }).catch(err => reject(err));
       
@@ -67,25 +65,25 @@ export default {
   /**
    * @return {Promise<any>} Permet de récupérer les types d'événement.
    */
-  getTypes: () => api.get('/types/get', {}, {headers}),
+  getTypes: () => api.get('/types/get', {}, { headers }),
 
   /**
    * @param {Object} options Options à traiter (tableau intitulé nature, déterminant le type, 'espace' et/ou 'temps')
    */
-  getDestinations: (options = {}) => api.get('/destinations/get', {options}, {headers}),
+  getDestinations: (options = {}) => api.get('/destinations/get', { options }, { headers }),
 
   /**
    * @param {String} token Token de l'utilisateur
    * @param {String} nom Nom du type à créer.
    */
-  createType: (token, nom) => api.post('/admin/type/add', {token, nom}, {headers}),
-  
+  createType: (token, nom) => api.post('/admin/type/add', { token, nom }, { headers }),
+
   /**
    * @param {String} token Token de l'utilisateur.
    * @param {Object} informations Informations de l'utilisateur.
    * @param {String} informations.lieu Lieu de la destination.
    */
-  createDestination: (token, informations) => api.post('/admin/destination/add', {token, ...informations}, {headers}),
+  createDestination: (token, informations) => api.post('/admin/destination/add', { token, ...informations }, { headers }),
 
   // countUsers:(function(users) {
   //   return new Promise((resolve, reject) => {

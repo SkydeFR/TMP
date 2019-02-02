@@ -250,10 +250,11 @@ nav.navbar {
   text-align: center;
 }
 
-#temps-epoques {
+
+#temps-epoques, #espace-croisieres {
   text-align: center;
 }
-#temps-epoques img, #espace-croisières img {
+#temps-epoques img, #espace-croisieres img {
   max-height: 600px;
 }
 
@@ -262,4 +263,14 @@ nav.navbar {
   font-size: 3em !important;
   color: $white !important;
   text-shadow: 3px 3px 1px $bright-greek;
+}
+
+.reservation {
+  background: $lime-soap;
+  background: linear-gradient(140deg, $lime-soap 0%, $ufo-green 100%);
+  color: $black !important;
+}
+
+.reservation:hover {
+  box-shadow: 0 0 11px $ufo-green;
 }
